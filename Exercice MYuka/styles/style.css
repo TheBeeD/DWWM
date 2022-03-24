@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    align-content: stretch;/*occupe toute la place disponible */
+    gap: 20px 10px; /* espacement entre les lignes et colones */
+    width: 100px; /*largeur */
+    height: 100px; /*hauteur */
+    margin: auto; 
+    background: #ffffff;
+    text-decoration: none;
+    }   
+html {
+        scroll-behavior: smooth ;
+    }
+    
+    

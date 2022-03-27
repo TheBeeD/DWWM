@@ -6,36 +6,92 @@ height: 100%;
 margin-top: 0px;
 display: flex;
 align-items: center;
-align-content: stretch;
+align-content: over;
 
 justify-content: space-between;
 }
+hr {
+  display: block;
+  margin: 3em 0 3em O;
+}
+.container {
+  display: flex;
+  align-content: stretch;/*occupe toute la place disponible */
+  gap: 20px 10px; /* espacement entre les lignes et colones */
+  width: 800px; /*largeur */
+  height: 100px; /*hauteur */
+  margin: auto; 
+  background: #ffffff;
+  text-decoration: none;
+}   
+.container2 {
+  display: flex;
+  align-content: stretch;/*occupe toute la place disponible */
+  gap: 20px 10px; /* espacement entre les lignes et colones */
+  width: 800px; /*largeur */
+  height: 100px; /*hauteur */
+  margin: auto; 
+  background: #ffffff;
+  text-decoration: none;
+}
+.container3 {
+  display: flex;
+  align-content: stretch;/*occupe toute la place disponible */
+  gap: 20px 10px; /* espacement entre les lignes et colones */
+  width: 800px; /*largeur */
+  height: 100px; /*hauteur */
+  margin: auto; 
+  background: #ffffff;
+  text-decoration: none;
+}
+img {
+  position:static;
+  width : 150px;
+  height : auto;
+  max-height : 400px;
+  margin: 0 5em 2em 5em;
+  
+  }
+  #cawotte1 {
+    padding-left: 5em;
+    padding-top: 2em;
+  }
+  #nom {
+    position:static;
+    width: 400px;
+    height: auto;
+    margin: 2em;
+    padding: 4em 8em 2em 8em;
+  }
+  #cawotte2 {
+    padding-left: 5em;
+    padding-top: 2em;
+  } 
 body {
-background: linear-gradient(45deg,  white 60%, #eab960);
+background: linear-gradient(135deg, white 60%, #eab960);
 height: 100%;
 width: auto;
-
-}    
-img {
-position: relative;
-width : 150px;
-height : auto;
-max-width : 400px;
-
+display: flex;
+flex-direction: column;
 }    
 *{
-    margin: 0px;
-    padding: 0px;
+    margin: 5px;
+    padding:2px;
     font-family: Avenir, sans-serif
+}
+ul {
+    padding: 5em;
+    margin: 2em 5em 2em 5em ;
+
 }
 li ul, li em  { /* closed */
     position:absolute;
-    left:-9999px;
+    left:-9999px; /*   loins des yeux et loin du coeur...   */
     color: aliceblue;
   }
   li:focus ul, li:active ul {/* opened*/
-    left:-1em;
-    right:-1em;
+    left:-1.5em;
+    right:-1.5em;
   }
   li:focus em,li:active em {/* closes (li looses focus)*/
     right:0em;
@@ -50,22 +106,15 @@ li ul, li em  { /* closed */
   }
   li li {display:block;}
   li em {
-    padding:0 0.45em;
+    padding:2em 2em 2em 2em;
     background:lightgray;
     border-radius:5px;
     height:2em;
-    line-height:1em;
+    line-height:5em;
     display:inline-block;
   }
+  #codeb {
+    padding: 3em 10em 3em 3em;
+  }
   
-  
-.container {
-    display: flex;
-    align-content: stretch;/*occupe toute la place disponible */
-    gap: 20px 10px; /* espacement entre les lignes et colones */
-    width: 100px; /*largeur */
-    height: 100px; /*hauteur */
-    margin: auto; 
-    background: #ffffff;
-    text-decoration: none;
-    }   
+   

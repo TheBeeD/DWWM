@@ -12,9 +12,19 @@ justify-content: space-between;
 }
 hr {
   display: block;
-  margin: 3em 0 3em O;
+  margin: 1em 0 1em 0;
 }
-.container {
+table {
+  border: medium solid #000000;
+  width: 50%;
+  margin-left: 25%;
+  }
+  td {
+    border: thin solid #000000;
+    width: 50%;
+    border-collapse:collapse;
+    }
+  .container {
   display: flex;
   align-content: stretch;/*occupe toute la place disponible */
   gap: 20px 10px; /* espacement entre les lignes et colones */
@@ -24,7 +34,7 @@ hr {
   background: #ffffff;
   text-decoration: none;
 }   
-.container2 {
+  .container2 {
   display: flex;
   align-content: stretch;/*occupe toute la place disponible */
   gap: 20px 10px; /* espacement entre les lignes et colones */
@@ -34,7 +44,7 @@ hr {
   background: #ffffff;
   text-decoration: none;
 }
-.container3 {
+  .container3 {
   display: flex;
   align-content: stretch;/*occupe toute la place disponible */
   gap: 20px 10px; /* espacement entre les lignes et colones */
@@ -44,15 +54,16 @@ hr {
   background: #ffffff;
   text-decoration: none;
 }
-img {
+  img {
   position:static;
   width : 150px;
   height : auto;
   max-height : 400px;
-  margin: 0 5em 2em 5em;
+  margin: 0 0 1em 2em;
   
   }
   #cawotte1 {
+    margin-left: 20%;
     padding-left: 5em;
     padding-top: 2em;
   }
@@ -64,9 +75,14 @@ img {
     padding: 4em 8em 2em 8em;
   }
   #cawotte2 {
-    padding-left: 5em;
+    padding-left: 2em;
     padding-top: 2em;
   } 
+  #kelloggs {
+    width: 320px;
+    height: auto;
+    max-height: 500px;
+  }
 body {
 background: linear-gradient(135deg, white 60%, #eab960);
 height: 100%;
@@ -113,8 +129,14 @@ li ul, li em  { /* closed */
     line-height:5em;
     display:inline-block;
   }
-  #codeb {
-    padding: 3em 10em 3em 3em;
+  #kelloggs {
+    padding-top: 1em;
   }
-  
+  #codeb {
+    padding: 1em -5em 1em 5em;
+    margin-left: 25%;
+  }
+  footer {
+    text-align: center;
+  }
    

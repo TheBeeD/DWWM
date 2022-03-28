@@ -25,18 +25,22 @@ table {
     border-collapse:collapse;
     }
   .container {
+  position: absolute;
   display: flex;
-  align-content: stretch;/*occupe toute la place disponible */
+  flex-direction: row;/*occupe toute la place disponible */
   gap: 20px 10px; /* espacement entre les lignes et colones */
-  width: 800px; /*largeur */
-  height: 100px; /*hauteur */
+  width: 20em; /*largeur */
+  height: 15em; /*hauteur */
+  min-height: auto;
   margin: auto; 
   background: #ffffff;
   text-decoration: none;
-}   
+
+  }
+ 
   .container2 {
   display: flex;
-  align-content: stretch;/*occupe toute la place disponible */
+  flex-direction: row;/*affiche le contenu en ligne */
   gap: 20px 10px; /* espacement entre les lignes et colones */
   width: 800px; /*largeur */
   height: 100px; /*hauteur */
@@ -59,7 +63,7 @@ table {
   width : 150px;
   height : auto;
   max-height : 400px;
-  margin: 0 0 1em 2em;
+  margin: 0 0 1em 0;
   
   }
   #cawotte1 {
@@ -69,17 +73,27 @@ table {
   }
   #nom {
     position:static;
-    width: 400px;
+    width: 25em;
+    max-width: 100%;
     height: auto;
     margin: 2em;
-    padding: 4em 8em 2em 8em;
+    padding: 4em 5em 2em 5em;
   }
   #cawotte2 {
     padding-left: 2em;
     padding-top: 2em;
   } 
+  #rech {
+   
+   width: 11em; 
+   float: right;
+  }
+  #brech {
+   width: 8em;
+   float: right;
+  }
   #kelloggs {
-    width: 320px;
+    width: 24em;
     height: auto;
     max-height: 500px;
   }
@@ -90,14 +104,10 @@ width: auto;
 display: flex;
 flex-direction: column;
 }    
-*{
-    margin: 5px;
-    padding:2px;
-    font-family: Avenir, sans-serif
-}
+
 ul {
-    padding: 5em;
-    margin: 2em 5em 2em 5em ;
+    padding: 15em;
+    margin: 2em 15em 2em 5em ;
 
 }
 li ul, li em  { /* closed */
@@ -124,19 +134,32 @@ li ul, li em  { /* closed */
   li em {
     padding:2em 2em 2em 2em;
     background:lightgray;
-    border-radius:5px;
+    border-radius:5%;
     height:2em;
     line-height:5em;
     display:inline-block;
   }
-  #kelloggs {
+   #kelloggs {
     padding-top: 1em;
+    padding-left: 2em;
   }
   #codeb {
     padding: 1em -5em 1em 5em;
     margin-left: 25%;
   }
+  #sh {
+    min-width: 11em;
+    min-height: 2.5em;
+  }
+  #scored {
+    padding: 2em 5em 2em 5em;
+  }
+  #reperes {
+    min-width: 20em;
+    min-height: auto;
+  }
   footer {
     text-align: center;
+    position: inherit;
   }
    

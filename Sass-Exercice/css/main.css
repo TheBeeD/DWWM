@@ -1,0 +1,26 @@
+body, h1, h2, p, span, li {
+  color: #005183;
+}
+
+a {
+  color: #0090e9;
+}
+
+h1 {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  -webkit-text-decoration-style: solid;
+          text-decoration-style: solid;
+  -webkit-text-decoration-color: #003150;
+          text-decoration-color: #003150;
+}
+
+ul {
+  list-style: none;
+}
+ul:hover {
+  background-color: lightblue;
+}
+ul li {
+  color: red;
+}

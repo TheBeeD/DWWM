@@ -1,0 +1,36 @@
+$yellow: #ff0;
+$light_yellow: #ff4;
+$dark_grey: #222;
+$light_grey: #444;
+$silver: #eee;
+
+$main-color:#005183;
+$dark-main-color: darken(#005183,10%);
+$light-main-color: lighten(#005183,20%);
+
+$yellow: #ff0;
+$light_yellow: #ff4;
+$dark_grey: #222;
+$light_grey: #444;
+$silver: #eee;
+
+body, h1, h2, p, span, li {
+    color: $main-color;
+}
+a{
+    color: $light-main-color;
+}
+h1 {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: $dark-main-color;
+}
+ul {
+    list-style: none;
+    &:hover{
+        background-color: lightblue;
+    }
+    li{
+        color: red;
+    }
+}

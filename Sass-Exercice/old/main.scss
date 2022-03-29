@@ -1,0 +1,96 @@
+$yellow: #ff0;
+$light_yellow: #ff4;
+$dark_grey: #222;
+$light_grey: #444;
+$silver: #eee;
+
+$grandHotel:"Grand Hotel", serif;
+$openSans:"Open Sans", helvetica, arial, sans-serif;
+
+/* ###################### HEADER #############################*/
+
+header{
+    display: flex;
+    flex-direction: column;
+    flex-flow: column wrap;
+    background-color: $dark_grey;
+    padding: 2%;
+    height: 1.5em;
+    h1{
+        color: $yellow;
+        font-family: $grandHotel;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+    }
+    
+    p{
+        color: $silver;
+        font-family: $openSans;
+        text-align: left;
+        margin: 0 auto auto 0;
+
+    }
+
+}
+/* -------------------BODY----------------------------------*/
+body { 
+ .limonade {
+    background-image: url(/images/bg-presentation.jpg) ;
+    height: 100%;
+    position:inherit; 
+    right:0px;
+    top:0px;
+    background-repeat: no-repeat;
+    background-position: top;
+    
+}
+    
+
+}
+.limonade h1  {
+    color: $silver;
+    font-family: $grandHotel;
+    text-align: left;
+    text-decoration-line: bottom;
+
+}
+.limonade p {
+    color: $silver;
+    font-family: $openSans;     
+}
+h1 menu {
+    color: $yellow;
+    text-align: left;
+    font-size: large;
+    form {
+        float: right;
+        margin: 0 0 auto auto;
+        text-align: right;
+    }
+a{
+    color: $dark_grey;
+}
+h1 body {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: $dark_grey;
+}
+ul, li content {
+    font-family: $openSans;
+    text-size-adjust: 3em;
+    list-style: none;
+#quote h1{
+    font-family: $grandHotel;
+    font-style: italic ;
+
+    
+}
+
+    
+    &:hover{
+        background-color: silver;
+    }
+
+}
+}

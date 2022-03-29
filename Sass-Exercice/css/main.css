@@ -1,26 +1,432 @@
-body, h1, h2, p, span, li {
-  color: #005183;
+/* @use'./partials/variables'; */
+/* =========================================================
+---------------#GENERAL
+==========================================================*/
+/*=========================================================
+---------------#HEADER
+==========================================================*/
+header {
+  background-color: #222;
+  padding: 2%;
+}
+@media (min-width: 1024px) {
+  header {
+    padding: 0;
+  }
+}
+header h1 {
+  color: #ff0;
+  font-family: "Grand Hotel", serif;
+  margin: 0;
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  header h1 {
+    text-align: left;
+    margin-left: 1%;
+    font-size: 50px;
+    font-weight: 400;
+  }
+}
+header p {
+  color: #fff;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  header p {
+    text-align: left;
+    margin: 0;
+    margin-left: 1%;
+  }
+}
+@media (min-width: 1024px) {
+  header {
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  header h1 {
+    width: 50%;
+  }
+  header p {
+    width: 50%;
+    order: 3;
+  }
+  header form {
+    align-self: center;
+    order: 2;
+  }
 }
 
-a {
-  color: #0090e9;
+#search {
+  display: block;
+  margin: 0 auto;
+}
+aside {
+  background-color: #222;
+}
+@media (min-width: 1024px) {
+  aside {
+    position: relative;
+    width: 35%;
+  }
 }
 
-h1 {
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
-  -webkit-text-decoration-style: solid;
-          text-decoration-style: solid;
-  -webkit-text-decoration-color: #003150;
-          text-decoration-color: #003150;
+@media (min-width: 1024px) {
+  .content {
+    display: flex;
+  }
 }
 
-ul {
-  list-style: none;
+nav ul {
+  list-style-type: none;
+  padding: 2em 2em 0 0;
+  margin: 0;
 }
-ul:hover {
-  background-color: lightblue;
+@media (min-width: 1024px) {
+  nav ul li + li {
+    margin-top: 5%;
+  }
 }
-ul li {
-  color: red;
+nav ul li {
+  text-align: left;
+  border-bottom: #ff4 2px solid;
+  width: 50%;
+  margin: 0 auto;
+  padding-bottom: 2%;
+  margin-bottom: 2%;
+}
+nav ul li:last-child {
+  border-bottom: none;
+}
+nav ul li a {
+  color: #eee;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+}
+
+.copyright {
+  font-family: "Grand Hotel", serif;
+  margin: 0;
+  padding: 0;
+  visibility: hidden;
+}
+@media (min-width: 1024px) {
+  .copyright {
+    color: #ff0;
+  }
+}
+
+/* =========================================================
+---------------#GENERAL
+==========================================================*/
+.limonade {
+  background: url(../images/bg-presentation.jpg);
+  background-size: 1400px auto;
+  background-repeat: no-repeat;
+  height: 1600px;
+  z-index: -1;
+}
+.limonade h1 {
+  font-family: "Grand Hotel", serif;
+  color: #fff;
+  font-weight: 300;
+  margin-left: 2%;
+  margin: 0;
+}
+.limonade p {
+  color: #eee;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  margin-left: 2%;
+}
+.limonade blockquote {
+  color: #eee;
+  text-align: right;
+}
+.limonade blockquote .quote {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+.limonade blockquote .mag {
+  font-family: "Grand Hotel", serif;
+}
+@media (min-width: 1024px) {
+  .limonade {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .limonade h1 {
+    width: 50%;
+    margin-top: 2%;
+    margin-left: 2%;
+    font-size: 65px;
+  }
+  .limonade p {
+    width: 50%;
+    font-size: 20px;
+    font-weight: 200;
+  }
+  .limonade blockquote {
+    width: 40%;
+    font-size: 40px;
+    font-style: italic;
+    align-self: right;
+    margin-left: 10%;
+    margin-top: 5%;
+  }
+  .limonade blockquote .mag {
+    font-size: 25px;
+  }
+}
+
+.produits h1 {
+  font-family: "Grand Hotel", serif;
+  font-size: 2.5em;
+}
+.produits .cards {
+  display: flex;
+  flex-direction: column;
+}
+.produits .cards .product {
+  border: 1px solid black;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  padding: 5px;
+}
+.produits .cards .product h2 {
+  font-family: "Grand Hotel", serif;
+  color: #222;
+  margin-left: 5%;
+}
+.produits .cards .product p {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  color: #444;
+  font-weight: 700;
+  margin-left: 5%;
+}
+.produits .cards .product img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+.produits a {
+  text-decoration: none;
+  align-self: center;
+  width: 30%;
+  height: 20%;
+  padding: 10px 20px;
+  background-color: #222;
+  color: #fff;
+  font-family: "Grand Hotel", serif;
+  font-size: 1.2em;
+  font-weight: 400;
+  margin-bottom: 5%;
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  .produits {
+    display: flex;
+    flex-direction: column;
+  }
+  .produits h1 {
+    margin-left: 5%;
+    font-size: 60px;
+    font-weight: 400;
+  }
+  .produits .cards {
+    flex-direction: row;
+  }
+  .produits a {
+    align-self: flex-end;
+    width: 20%;
+    margin: 0;
+    margin-bottom: 2%;
+    margin-right: 3.5%;
+    font-size: 30px;
+  }
+}
+
+.production {
+  background: url(../images/bg-production.jpg) no-repeat;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.production h1 {
+  font-family: "Grand Hotel", serif;
+  color: #fff;
+}
+.production p {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  color: #eee;
+}
+.production .cards .step figcaption {
+  color: #eee;
+}
+.production a {
+  text-decoration: none;
+  align-self: center;
+  width: 30%;
+  height: 20%;
+  padding: 10px 20px;
+  background-color: #ff0;
+  color: #222;
+  font-family: "Grand Hotel", serif;
+  font-size: 1.2em;
+  font-weight: 700;
+  margin-bottom: 5%;
+}
+@media (min-width: 1024px) {
+  .production h1 {
+    text-align: right;
+    margin: 2%;
+    font-size: 50px;
+    font-weight: 400;
+  }
+  .production p {
+    text-align: right;
+    width: 40%;
+    align-self: flex-end;
+    margin-right: 2%;
+    margin-top: 0;
+    font-size: 20px;
+  }
+  .production .cards {
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+  }
+  .production a {
+    align-self: flex-end;
+    margin-right: 5%;
+    width: 20%;
+    font-size: 30px;
+  }
+}
+
+.client {
+  display: flex;
+  flex-direction: column;
+}
+.client h1 {
+  font-family: "Grand Hotel", serif;
+  color: #222;
+}
+.client .cards .client {
+  border: 1px solid black;
+  padding: 5px;
+  text-align: left;
+}
+.client .cards .client img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+.client .cards .client figcaption h2 {
+  font-family: "Grand Hotel", serif;
+  margin-left: 5%;
+}
+.client .cards .client figcaption blockquote {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  margin-left: 5%;
+  font-style: italic;
+}
+.client a {
+  text-decoration: none;
+  align-self: center;
+  width: 30%;
+  height: 20%;
+  padding: 10px 20px;
+  background-color: #222;
+  color: #fff;
+  font-family: "Grand Hotel", serif;
+  font-size: 1.2em;
+  font-weight: 400;
+  margin-bottom: 5%;
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  .client h1 {
+    margin-left: 5%;
+    font-size: 60px;
+    font-weight: 400;
+  }
+  .client .cards {
+    display: flex;
+  }
+  .client .cards .client {
+    width: 33%;
+  }
+  .client a {
+    align-self: flex-end;
+    margin-right: 3.4%;
+    width: 20%;
+    font-size: 30px;
+  }
+}
+
+.contact {
+  background: url(../images/bg-contact.jpg) 0% 30% no-repeat;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+}
+.contact h1 {
+  font-family: "Grand Hotel", serif;
+  color: #fff;
+  font-weight: 500;
+  text-align: left;
+  margin-left: 5%;
+}
+.contact form {
+  width: 80%;
+}
+.contact form p {
+  display: flex;
+  flex-direction: column;
+  color: #eee;
+  font-size: 1.3em;
+  font-weight: 400;
+}
+.contact form p #email {
+  opacity: 0.7;
+}
+.contact form p textarea {
+  opacity: 0.7;
+}
+.contact .btn-submit {
+  text-decoration: none;
+  align-self: center;
+  width: 50%;
+  height: 20%;
+  padding: 10px 20px;
+  background-color: #ff0;
+  color: #222;
+  font-family: "Grand Hotel", serif;
+  font-size: 1.2em;
+  font-weight: 700;
+  margin-bottom: 5%;
+  border: none;
+}
+@media (min-width: 1024px) {
+  .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .contact h1 {
+    font-size: 60px;
+    align-self: flex-start;
+  }
+  .contact p {
+    width: 50%;
+    margin-left: 7%;
+  }
 }

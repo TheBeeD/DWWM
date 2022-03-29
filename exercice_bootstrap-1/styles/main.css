@@ -1,0 +1,23 @@
+h1 {
+    padding: 2em;
+    float: center;
+}
+
+body {
+   background-image: url("/Images/Nature-autumn-silence_1920x1080.jpg");
+   
+}
+.container {
+  margin: 10rem;
+  padding: 0 25% 0 25%;  
+  display: grid;
+  grid-template-columns: 50rem 1fr 1fr 1fr;
+  grid-gap: .5rem;
+}
+.carousel-item {
+    max-height: 100%;
+}
+
+
+
+

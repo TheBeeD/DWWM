@@ -4,23 +4,37 @@ $dark_grey: #222;
 $light_grey: #444;
 $silver: #eee;
 
-$main-color:#005183;
-$dark-main-color: darken(#005183,10%);
-$light-main-color: lighten(#005183,20%);
+$grandHotel:"Grand Hotel", serif;
+$openSans:"Open Sans", helvetica, arial, sans-serif;
 
-$yellow: #ff0;
-$light_yellow: #ff4;
-$dark_grey: #222;
-$light_grey: #444;
-$silver: #eee;
+/* ###################### HEADER #############################*/
 
-body, h1, h2, p, span, li {
-    color: $main-color;
+header{
+    background-color: $dark_grey;
+    padding: 5%;
+    h1{
+        color: $yellow;
+        font-family: $grandHotel;
+        margin: 0;
+        text-align: center;
+    }
+    p{
+        color: $light;
+        font-family: $openSans;
+        text-align: center;
+    }
+}
+
+h1 menu {
+    color: $yellow;
+}
+h1 .limonade {
+    
 }
 a{
-    color: $light-main-color;
+    color: $$dark_grey;
 }
-h1 {
+h1 body {
     text-decoration-line: underline;
     text-decoration-style: solid;
     text-decoration-color: $dark-main-color;
@@ -28,7 +42,7 @@ h1 {
 ul {
     list-style: none;
     &:hover{
-        background-color: lightblue;
+        background-color: silver;
     }
     li{
         color: red;

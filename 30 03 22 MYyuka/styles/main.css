@@ -27,11 +27,16 @@ body {
 }
 
 
-.search .row  .gx-5 .col-12{
+.search input {
 
     align-content: center;
     background-color: #baffb0;
     border-style:groove;
+    height: 2.5em;
+    width: 20em;
+    padding: 1em 2em 1em 2em;
+    margin: 0.5em 5em 0.5em 12em ;
+
 }
 
 .container {
@@ -51,6 +56,6 @@ body {
     background-color: #baffb0;
     border-style:groove;
 }
-#scann {
-    
+.scann {
+    padding-bottom: 1em;
 }

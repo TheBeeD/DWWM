@@ -5,7 +5,7 @@ body {
     padding: 0% 0% 0% 0%;
     background-image: url("/Images/back.jpg");
     background-repeat:repeat-y ;
-    background-size: contain;
+    background-size: cover;
 }
 .titre {
     text-align: center;
@@ -17,7 +17,7 @@ body {
 .titre h5 {
     padding: 0;
 }
-.col-4 {
+#caroussel ,#ingredients{
     text-align: center;
     align-content: center;
     border-style:groove;
@@ -27,8 +27,30 @@ body {
 }
 
 
-.search {
-    margin: 0 3em 0 3em;
-    align-content: center;
+.search .row  .gx-5 .col-12{
 
+    align-content: center;
+    background-color: #baffb0;
+    border-style:groove;
+}
+
+.container {
+    max-width: 40%;
+    max-width: 40%;
+    height: 10%;
+    width: 40%;
+    align-content: center;
+    background-color: #baffb0;
+    border-style:groove;
+}
+.search button {
+    padding-left: 6em;
+    background-color: aquamarine;
+}
+.carousel-inner {
+    background-color: #baffb0;
+    border-style:groove;
+}
+#scann {
+    
 }

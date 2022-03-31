@@ -10,52 +10,131 @@ body {
 .titre {
     text-align: center;
     border-style:groove;
-    padding: 1em 2em 1em 2em;
-    margin: 4em 12em 4em 12em ;
+    padding: 0.5em 2em 1em 2em;
+    margin: 4em 18.7em 1em 18.85em ;
     background-color: #baffb0;
+    box-shadow: 10px 10px 10px #3e5a39;
+    border-radius:1em 1em;
 }
 .titre h5 {
     padding: 0;
 }
-#caroussel ,#ingredients{
-    text-align: center;
-    align-content: center;
-    border-style:groove;
-    padding: 1%;
-    margin: 2em;
+#caroussel {
+    height: 35em;
+    width: 30em;
+    max-height: 43em;
+    border-style: groove;
     background-color: #baffb0;
+    border-radius: 1em 1em;
+    margin-left: 1em;
+    box-shadow: 10px 10px 10px #3e5a39;
 }
-
-
-.search input {
-
+#ingredients{
+    text-align: left;
     align-content: center;
+    padding: 0;
+    border-style: groove;
+    background-color: #baffb0;
+    border-radius: 1em 1em;
+    height: 91%; 
+    width: 40em;
+    box-shadow: 10px 10px 10px #3e5a39;
+}
+#ingredients p , h3 {
+    padding: 2% 1% 2% 1%;
+}
+.search  {
+
+    align-content:space-between;
     background-color: #baffb0;
     border-style:groove;
+    border-radius: 5%;
+    border-radius: 1em 1em;
     height: 2.5em;
-    width: 20em;
-    padding: 1em 2em 1em 2em;
-    margin: 0.5em 5em 0.5em 12em ;
+    width: 18.5em;
+    padding: 2em 46em 5em 35em;
+    margin: 0em 1.8em 1em 1em ;
+    box-shadow: 10px 10px 10px #3e5a39;
+}
+.search input {
+  padding: 0;
+  margin: 0;
+}
+#champs{
+    margin-top: -1.2em;
+}
+#scann {
+    padding-left: 3em;
+    padding-right: 3em;
+    margin-top: 0.5em;
+    margin-left: 5em;
+}
+#allergenes {
+    border-style: groove;
+    background-color: #baffb0;
+    border-radius: 1em 1em;
+    margin:2em 7em 1em 1.25em; 
+    padding: 2em 2em 5em 2.2em ;
+    font-size: medium;
+    box-shadow: 10px 10px 10px #3e5a39;
+}
+#nova , #analyse , #infonut{
+    height: 30em;
+    width: 25em;
+    max-height: 30em;
+    border-style: groove;
+    background-color: #baffb0;
+    border-radius: 1em 1em;
+    box-shadow: 10px 10px 10px #3e5a39;
+}
+#nova {
+    padding: 2em 1em 0 1em;
+}
+#infonut h4 {
+     padding: 0.5em 0 0.3em 2em ;
+}
+#analyse {
+    padding: 2em 1em 0 1em;
+}
+#nova4 {
+    padding: 2em 0 3em 9em;
+}
+#tab {
+    padding: 2em 1em 2em 1em;
+    max-height: 21em;
+}
+    
+#scored {
+    max-width: 20em;
+    padding: 1em;
 
 }
-
-.container {
-    max-width: 40%;
-    max-width: 40%;
-    height: 10%;
-    width: 40%;
-    align-content: center;
+#sh {
+    padding: 2em 0 2em 3.5em;
+}
+#veg{
+    padding: 2em 0 2em 5.5em;
+}
+#infos {
+    border-style: groove;
     background-color: #baffb0;
-    border-style:groove;
+    border-radius: 1em 1em;
+    margin:2em 7em 1em 1.25em; 
+    padding: 2em 2em 5em 2.2em ;
+    font-size: medium;
+    box-shadow: 10px 10px 10px #3e5a39;
 }
-.search button {
-    padding-left: 6em;
-    background-color: aquamarine;
+#contact {
+    margin-left: 70%;
 }
-.carousel-inner {
+#copyright {
+    
+    border-style: groove;
     background-color: #baffb0;
-    border-style:groove;
-}
-.scann {
-    padding-bottom: 1em;
+    border-radius: 1em 1em;
+    margin:2em 7em 1em 1.25em; 
+    padding: 2em ;
+    font-size: medium;
+    text-align: center;
+    box-shadow: 10px 10px 10px #3e5a39;
 }

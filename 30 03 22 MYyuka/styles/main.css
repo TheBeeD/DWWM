@@ -21,7 +21,7 @@ body {
 }
 #caroussel {
     height: 35em;
-    width: 30em;
+    width: 40em;
     max-height: 43em;
     border-style: groove;
     background-color: #ffffff;
@@ -33,12 +33,14 @@ body {
 #ingredients{
     text-align: left;
     align-content: center;
-    padding: 0 8em 0 8em;
     border-style: groove;
     background-color: #ffffff;
     border-radius: 1em 1em;
-
+    height: 91%; 
+    width: 45em;
     box-shadow: 10px 10px 10px #000000;
+    margin-right: 15em;
+
 }
 #ingredients p , h3 {
     padding: 2% 1% 2% 1%;

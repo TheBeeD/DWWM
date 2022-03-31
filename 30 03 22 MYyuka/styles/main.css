@@ -12,8 +12,8 @@ body {
     border-style:groove;
     padding: 0.5em 2em 1em 2em;
     margin: 4em 18.7em 1em 18.85em ;
-    background-color: #baffb0;
-    box-shadow: 10px 10px 10px #3e5a39;
+    background-color: #ffffff;
+    box-shadow: 10px 10px 10px #000000;
     border-radius:1em 1em;
 }
 .titre h5 {
@@ -24,21 +24,21 @@ body {
     width: 30em;
     max-height: 43em;
     border-style: groove;
-    background-color: #baffb0;
+    background-color: #ffffff;
     border-radius: 1em 1em;
     margin-left: 1em;
-    box-shadow: 10px 10px 10px #3e5a39;
+    padding: 0 4em 0 4em;
+    box-shadow: 10px 10px 10px #000000;
 }
 #ingredients{
     text-align: left;
     align-content: center;
-    padding: 0;
+    padding: 0 8em 0 8em;
     border-style: groove;
-    background-color: #baffb0;
+    background-color: #ffffff;
     border-radius: 1em 1em;
-    height: 91%; 
-    width: 40em;
-    box-shadow: 10px 10px 10px #3e5a39;
+
+    box-shadow: 10px 10px 10px #000000;
 }
 #ingredients p , h3 {
     padding: 2% 1% 2% 1%;
@@ -46,7 +46,7 @@ body {
 .search  {
 
     align-content:space-between;
-    background-color: #baffb0;
+    background-color: #ffffff;
     border-style:groove;
     border-radius: 5%;
     border-radius: 1em 1em;
@@ -54,7 +54,7 @@ body {
     width: 18.5em;
     padding: 2em 46em 5em 35em;
     margin: 0em 1.8em 1em 1em ;
-    box-shadow: 10px 10px 10px #3e5a39;
+    box-shadow: 10px 10px 10px #000000;
 }
 .search input {
   padding: 0;
@@ -71,21 +71,21 @@ body {
 }
 #allergenes {
     border-style: groove;
-    background-color: #baffb0;
+    background-color: #ffffff;
     border-radius: 1em 1em;
     margin:2em 7em 1em 1.25em; 
     padding: 2em 2em 5em 2.2em ;
     font-size: medium;
-    box-shadow: 10px 10px 10px #3e5a39;
+    box-shadow: 10px 10px 10px #000000;
 }
 #nova , #analyse , #infonut{
     height: 30em;
     width: 25em;
     max-height: 30em;
     border-style: groove;
-    background-color: #baffb0;
+    background-color: #ffffff;
     border-radius: 1em 1em;
-    box-shadow: 10px 10px 10px #3e5a39;
+    box-shadow: 10px 10px 10px #000000;
 }
 #nova {
     padding: 2em 1em 0 1em;
@@ -117,12 +117,12 @@ body {
 }
 #infos {
     border-style: groove;
-    background-color: #baffb0;
+    background-color: #ffffff;
     border-radius: 1em 1em;
     margin:2em 7em 1em 1.25em; 
     padding: 2em 2em 5em 2.2em ;
     font-size: medium;
-    box-shadow: 10px 10px 10px #3e5a39;
+    box-shadow: 10px 10px 10px #000000;
 }
 #contact {
     margin-left: 70%;
@@ -130,11 +130,11 @@ body {
 #copyright {
     
     border-style: groove;
-    background-color: #baffb0;
+    background-color: #ffffff;
     border-radius: 1em 1em;
     margin:2em 7em 1em 1.25em; 
     padding: 2em ;
     font-size: medium;
     text-align: center;
-    box-shadow: 10px 10px 10px #3e5a39;
+    box-shadow: 10px 10px 10px #000000;
 }

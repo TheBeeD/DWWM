@@ -1,4 +1,20 @@
+@media (min-width: 640px) {
 
+}
+
+@media (min-width: 768px) {
+    .proj-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 1024px) {
+
+}
+
+@media (min-width: 1280px) {
+
+}
 body {
     height: 1300px;
     width: auto;
@@ -7,27 +23,33 @@ body {
     background-repeat:repeat-y ;
     background-size: cover;
 }
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+
 .titre {
     text-align: center;
     border-style:groove;
-    padding: 0.5em 2em 1em 2em;
-    margin: 4em 18.7em 1em 18.85em ;
+    padding: 0.5em 8em 1em 8em;
+    margin: 1em 0 1em 0;
     background-color: #ffffff;
     box-shadow: 10px 10px 10px #000000;
     border-radius:1em 1em;
 }
+.titre h1 {
+    font-family: 'Marck Script', cursive;
+    }
 .titre h5 {
     padding: 0;
 }
 #caroussel {
-    height: 35em;
+    height: 40em;
     width: 40em;
     max-height: 43em;
     border-style: groove;
     background-color: #ffffff;
     border-radius: 1em 1em;
-    margin-left: 1em;
-    padding: 0 4em 0 4em;
+    align-content: center;
+    margin: 0 0 1em 0;
+    padding: 0 2em 0 4em;
     box-shadow: 10px 10px 10px #000000;
 }
 #ingredients{
@@ -36,10 +58,11 @@ body {
     border-style: groove;
     background-color: #ffffff;
     border-radius: 1em 1em;
-    height: 91%; 
-    width: 45em;
-    box-shadow: 10px 10px 10px #000000;
+    height:40em; 
+    width: 38.4em;
     margin-right: 15em;
+    box-shadow: 10px 10px 10px #000000;
+    
 
 }
 #ingredients p , h3 {
@@ -54,8 +77,8 @@ body {
     border-radius: 1em 1em;
     height: 2.5em;
     width: 18.5em;
-    padding: 2em 46em 5em 35em;
-    margin: 0em 1.8em 1em 1em ;
+    padding: 2em 51em 5em 30em;
+    margin: 0 0 1em 0 ;
     box-shadow: 10px 10px 10px #000000;
 }
 .search input {
@@ -75,7 +98,7 @@ body {
     border-style: groove;
     background-color: #ffffff;
     border-radius: 1em 1em;
-    margin:2em 7em 1em 1.25em; 
+    margin:0 0 1em 0; 
     padding: 2em 2em 5em 2.2em ;
     font-size: medium;
     box-shadow: 10px 10px 10px #000000;
@@ -121,7 +144,7 @@ body {
     border-style: groove;
     background-color: #ffffff;
     border-radius: 1em 1em;
-    margin:2em 7em 1em 1.25em; 
+    margin:1em 0 1em 0; 
     padding: 2em 2em 5em 2.2em ;
     font-size: medium;
     box-shadow: 10px 10px 10px #000000;
@@ -134,7 +157,7 @@ body {
     border-style: groove;
     background-color: #ffffff;
     border-radius: 1em 1em;
-    margin:2em 7em 1em 1.25em; 
+    margin:0 0 1em 0; 
     padding: 2em ;
     font-size: medium;
     text-align: center;

@@ -1,27 +1,11 @@
-@media (min-width: 640px) {
-
-}
-
-@media (min-width: 768px) {
-    .proj-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (min-width: 1024px) {
-
-}
-
-@media (min-width: 1280px) {
-
-}
 body {
-    height: 1300px;
+    height: 1280px;
     width: auto;
     padding: 0% 0% 0% 0%;
     background-image: url("/Images/back.jpg");
     background-repeat:repeat-y ;
     background-size: cover;
+    
 }
 @import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
 
@@ -31,7 +15,7 @@ body {
     padding: 0.5em 8em 1em 8em;
     margin: 1em 0 1em 0;
     background-color: #ffffff;
-    box-shadow: 10px 10px 10px #000000;
+    box-shadow: 2em 2em 2em #000000;
     border-radius:1em 1em;
 }
 .titre h1 {
@@ -50,7 +34,7 @@ body {
     align-content: center;
     margin: 0 0 1em 0;
     padding: 0 2em 0 4em;
-    box-shadow: 10px 10px 10px #000000;
+    box-shadow: 2em 2em 2em #000000;
 }
 #ingredients{
     text-align: left;
@@ -61,7 +45,7 @@ body {
     height:40em; 
     width: 38.4em;
     margin-right: 15em;
-    box-shadow: 10px 10px 10px #000000;
+    box-shadow: 2em 2em 2em #000000;
     
 
 }
@@ -79,7 +63,7 @@ body {
     width: 18.5em;
     padding: 2em 51em 5em 30em;
     margin: 0 0 1em 0 ;
-    box-shadow: 10px 10px 10px #000000;
+    box-shadow: 2em 2em 2em #000000;
 }
 .search input {
   padding: 0;
@@ -101,7 +85,7 @@ body {
     margin:0 0 1em 0; 
     padding: 2em 2em 5em 2.2em ;
     font-size: medium;
-    box-shadow: 10px 10px 10px #000000;
+    box-shadow: 2em 2em 2em #000000;
 }
 #nova , #analyse , #infonut{
     height: 30em;
@@ -110,7 +94,7 @@ body {
     border-style: groove;
     background-color: #ffffff;
     border-radius: 1em 1em;
-    box-shadow: 10px 10px 10px #000000;
+    box-shadow: 2em 2em 2em #000000;
 }
 #nova {
     padding: 2em 1em 0 1em;
@@ -147,7 +131,7 @@ body {
     margin:1em 0 1em 0; 
     padding: 2em 2em 5em 2.2em ;
     font-size: medium;
-    box-shadow: 10px 10px 10px #000000;
+    box-shadow: 2em 2em 2em #000000;
 }
 #contact {
     margin-left: 70%;
@@ -161,5 +145,82 @@ body {
     padding: 2em ;
     font-size: medium;
     text-align: center;
-    box-shadow: 10px 10px 10px #000000;
+    box-shadow: 2em 2em 2em #000000;
+}
+
+@media  (min-width: 640px) {
+    .wrapper {
+      
+        grid-template-columns: 20% auto;
+        grid-template-areas:
+        "titre "
+        "search"
+        "caroussel"
+        "ingredients"
+        "allergenes"
+        "nova"
+        "analyses"
+        "infonut"
+        "copyright";
+      } 
+      .body {
+        height: 640px;
+        width: auto;
+        padding: 0% 0% 0% 0%;  
+    }       
+}
+
+@media (min-width: 768px) {
+    .wrapper {
+      
+        grid-template-columns: 50% auto;
+        grid-template-areas:
+        "titre   titre"
+        "search   search"
+        "caroussel   caroussel"
+        "ingredients   ingredients "
+        "allergenes     allergenes"
+        "nova   nova"
+        "analyses   analyses"
+        "infonut   infonut"
+        "copyright   copyright";
+      } 
+      .body {
+        height: 768px;
+        width: auto;
+        padding: 0% 0% 0% 0%;  
+    } 
+    }
+
+@media (min-width: 1024px) {
+    .wrapper {
+        
+        grid-template-columns: 80% auto;
+        grid-template-areas:
+        "titre   titre   titre"
+        "search   search   search"
+        "caroussel   ingredients"
+        "allergenes     allergenes     allergenes"
+        "nova   analyses   infonut"
+        "copyright   copyright   copyright";
+      }
+    .body {
+        height: 1024px;
+        width: auto;
+        padding: 0% 0% 0% 0%;  
+    }   
+}
+
+@media (min-width: 1280px) {
+    .wrapper {
+      
+        grid-template-columns: 100% auto;
+        grid-template-areas:
+        "titre   titre   titre"
+        "search   search   search"
+        "caroussel   ingredients"
+        "allergenes     allergenes     allergenes"
+        "nova   analyses   infonut"
+        "copyright   copyright   copyright";
+      } 
 }

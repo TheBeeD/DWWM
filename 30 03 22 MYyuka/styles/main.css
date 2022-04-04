@@ -1,12 +1,4 @@
-body {
-    height: 1280px;
-    width: auto;
-    padding: 0% 0% 0% 0%;
-    background-image: url("/Images/back.jpg");
-    background-repeat:repeat-y ;
-    background-size: cover;
-    
-}
+
 @import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
 
 .titre {
@@ -149,8 +141,13 @@ body {
 }
 
 @media  (min-width: 640px) {
-    .wrapper {
-      
+    .body {
+        background-image: url("/Images/back.jpg");
+        background-repeat:repeat-y ;
+        background-size: cover;
+        height: 640px;
+        width: auto;
+        padding: 0% 0% 0% 0%;
         grid-template-columns: 20% auto;
         grid-template-areas:
         "titre "
@@ -162,17 +159,19 @@ body {
         "analyses"
         "infonut"
         "copyright";
+
       } 
-      .body {
-        height: 640px;
-        width: auto;
-        padding: 0% 0% 0% 0%;  
-    }       
+       
 }
 
 @media (min-width: 768px) {
-    .wrapper {
-      
+    .body {
+        background-image: url("/Images/back.jpg");
+        background-repeat:repeat-y ;
+        background-size: cover;
+        height: 768px;
+        width: auto;
+        padding: 0% 0% 0% 0%;
         grid-template-columns: 50% auto;
         grid-template-areas:
         "titre   titre"
@@ -185,16 +184,16 @@ body {
         "infonut   infonut"
         "copyright   copyright";
       } 
-      .body {
-        height: 768px;
-        width: auto;
-        padding: 0% 0% 0% 0%;  
-    } 
-    }
+}
 
 @media (min-width: 1024px) {
-    .wrapper {
-        
+    .body {
+        height: 1024px;
+        width: auto;
+        padding: 0% 0% 0% 0%; 
+        background-image: url("/Images/back.jpg");
+        background-repeat:repeat-y ;
+        background-size: cover;
         grid-template-columns: 80% auto;
         grid-template-areas:
         "titre   titre   titre"
@@ -204,16 +203,18 @@ body {
         "nova   analyses   infonut"
         "copyright   copyright   copyright";
       }
-    .body {
-        height: 1024px;
-        width: auto;
-        padding: 0% 0% 0% 0%;  
-    }   
+ 
+  
 }
 
 @media (min-width: 1280px) {
-    .wrapper {
-      
+    body {
+        height: 1280px;
+        width: auto;
+        padding: 0% 0% 0% 0%;
+        background-image: url("/Images/back.jpg");
+        background-repeat:repeat-y ;
+        background-size: cover;
         grid-template-columns: 100% auto;
         grid-template-areas:
         "titre   titre   titre"

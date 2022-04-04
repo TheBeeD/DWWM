@@ -1,0 +1,10 @@
+resolutions mobile les plus communes
+360x640
+
+
+noir: #0D0D0D
+sable: #F2C84B
+citron: #F2E205
+bleufoncé: #2F3640
+bleuciel: #7587BF
+

@@ -10,13 +10,10 @@ p {
   }
 #mapmonde {
     float: right;
-    margin-left: 25px;
     margin-right: 170px;
 }
 #explain {
-
-    display: block;
-    width: 500px;
+    width: 740px;
 
 }
 #eqgif {

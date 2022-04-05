@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300&display=swap');
+body{
+    height: 1280px;
+}
+p {
+    padding: 5 auto 10 10;
+    font-family: 'Jura', sans-serif;
+    color: antiquewhite;
+    text-align: justify;
+  }
+#mapmonde {
+    float: right;
+    margin-left: 25px;
+    margin-right: 170px;
+}
+#explain {
+
+    display: block;
+    width: 500px;
+
+}
+#eqgif {
+    float: left;
+    padding-top: 15px;
+    padding-right: 20px;
+
+}  

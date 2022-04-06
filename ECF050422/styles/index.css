@@ -27,3 +27,22 @@ p {
     padding-right: 20px;
 
 }  
+@media(max-width:767px){
+    body {
+        width: 767px;
+    }
+    p {
+        font-size: medium;
+    }
+    
+    #mapmonde {
+    float: right;
+    width: 50%;
+    height: auto;
+    margin:2PX 15px 2px 2px;
+    padding: 2px auto 2px 2px;
+    }  
+}
+@media(min-width:768px){}
+@media(min-width:992px){}
+@media(min-width:1200px){}

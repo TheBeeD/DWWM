@@ -97,14 +97,15 @@ hr {
   body {
     width: 767px;
   }
-
+  a,
   p,
   ul,
   li,
   th,
   td,
   h1,
-  h4 {
+  h4,
+  caption {
     font-size: xx-large
   }
 
@@ -114,7 +115,7 @@ hr {
 
 .pic-ctn {
   position: relative;
-  width: 490px;
+  width: 360px;
   height: 200px;
   margin: 10px 0 10px 0;
 }

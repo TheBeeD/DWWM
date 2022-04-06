@@ -31,16 +31,36 @@ p {
     body {
         width: 767px;
     }
-    p {
-        font-size: medium;
+    #explain {
+        width: 100%;
     }
     
+    #eqgif {
+        width: 70%;
+        height: auto;
+    }
+ /*   #h_un {
+        display: flex;
+        flex-wrap: wrap;
+    }*/
+    a,
+    p,
+    ul,
+    li,
+    th,
+    td,
+    h1,
+    h4,
+    caption {
+      font-size: xx-large
+    }
+
     #mapmonde {
     float: right;
-    width: 50%;
+    width: 100%;
     height: auto;
-    margin:2PX 15px 2px 2px;
-    padding: 2px auto 2px 2px;
+    margin:2px;
+    padding: 2px;
     }  
 }
 @media(min-width:768px){}

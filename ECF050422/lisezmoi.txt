@@ -2,7 +2,8 @@ BEDNAREK Olivier
 
 Formats traités pour le responsive:
 
-Galaxy Note 3 Android 4.3 mais mon caroussel fait encore buguer l'affichage.
+Galaxy Note 3 Android 4.3 
+iphone 11 pro
 
 
 

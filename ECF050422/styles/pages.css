@@ -12,7 +12,7 @@ p {
   ul , li>ul {
     padding: 50px 0 20px 300px;
   }
-   h1 , h4 , a , .gorowin {
+   h1 , h4 , a , .gorowin , img {
       flex-wrap: wrap;
       display: flex;
 
@@ -22,7 +22,8 @@ p {
     }
     
 .gorowin a:hover span {
-    display:block;
+    flex-wrap: wrap;
+    display:flex;
     margin:0 0 0 0
     } 
 /* #goro :hover {
@@ -94,7 +95,7 @@ p {
   img:nth-child(5) {
     animation-delay: 8s;
   }  
-  /*-------tableau-----------------------*/
+  /*-------tableaux-----------------------*/
 table , td , th {
   border: solid antiquewhite;
 }
@@ -106,4 +107,8 @@ table {
 }
 caption , h4 {
   color: antiquewhite;
+}
+hr {
+  color: #fdce4c;
+  border: solid;  
 }

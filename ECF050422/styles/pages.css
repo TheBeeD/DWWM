@@ -114,6 +114,8 @@ hr {
 }
 
 .pic-ctn {
+  flex-wrap: wrap;
+  display: flex;
   position: relative;
   width: 360px;
   height: 200px;

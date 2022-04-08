@@ -31,6 +31,10 @@ p {
     body {
         width: 767px;
     }
+    #entete {
+        width: 100%;
+        display: flex;
+    }
     #explain {
         width: 100%;
     }
@@ -39,10 +43,10 @@ p {
         width: 70%;
         height: auto;
     }
- /*   #h_un {
+    #h_un {
         display: flex;
         flex-wrap: wrap;
-    }*/
+    }
     a,
     p,
     ul,
@@ -63,6 +67,48 @@ p {
     padding: 2px;
     }  
 }
-@media(min-width:768px){}
+@media(max-width:720px){
+    body {
+        width: 720px;
+        height: auto;
+        flex-wrap: wrap;
+    }
+    #entete {
+        width: 100%;
+        display: flex;
+    }
+    #explain {
+        width: 100%;
+    }
+    
+    #eqgif {
+        width: 70%;
+        height: auto;
+    }
+    #h_un {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    a,
+    p,
+    ul,
+    li,
+    th,
+    td,
+    h1,
+    h4,
+    caption {
+      font-size: xx-large
+    }
+
+    #mapmonde {
+    float: right;
+    width: 100%;
+    height: auto;
+    margin:2px;
+    padding: 2px;
+    }  
+}
+
 @media(min-width:992px){}
 @media(min-width:1200px){}

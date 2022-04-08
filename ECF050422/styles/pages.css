@@ -92,7 +92,51 @@ hr {
   color: #fdce4c;
   border: solid;
 }
-
+@media (max-width:720px) {
+  .pic-ctn {
+    flex-wrap: wrap;
+    display: flex;
+    position: relative;
+    width: 360px;
+    height: 200px;
+    margin: 10px 0 10px 0;
+  }
+  
+  .pic-ctn>img {
+  
+    width: auto;
+    max-height: auto;
+    position: absolute;
+    top: 0;
+    left: calc(50% - 80px);
+    opacity: 0;
+    animation: display 10s infinite;
+  
+  }
+  
+  .pic {
+    width: auto;
+    max-height: 200px;
+  
+  }
+  
+  img:nth-child(2) {
+    animation-delay: 2s;
+  }
+  
+  img:nth-child(3) {
+    animation-delay: 4s;
+  }
+  
+  img:nth-child(4) {
+    animation-delay: 6s;
+  }
+  
+  img:nth-child(5) {
+    animation-delay: 8s;
+  }
+  
+}
 @media(max-width:767px) {
   body {
     width: 767px;

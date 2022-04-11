@@ -1,5 +1,5 @@
 let a = `Bonjour`;
-let prenom = ''
+let prenom = '';
 
 alert(a + " " + prompt('Ecrivez votre prénom'));   
 

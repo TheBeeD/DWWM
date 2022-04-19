@@ -94,6 +94,7 @@ hr {
 }
 @media (max-width:720px) {
   .pic-ctn {
+    box-sizing: border-box;
     flex-wrap: wrap;
     display: flex;
     position: relative;
@@ -103,7 +104,7 @@ hr {
   }
   
   .pic-ctn>img {
-  
+    box-sizing: border-box;
     width: auto;
     max-height: auto;
     position: absolute;
@@ -158,6 +159,7 @@ hr {
 }
 
 .pic-ctn {
+  box-sizing: border-box;
   flex-wrap: wrap;
   display: flex;
   position: relative;
@@ -167,7 +169,7 @@ hr {
 }
 
 .pic-ctn>img {
-
+  box-sizing: border-box;
   width: auto;
   max-height: 300px;
   position: absolute;
@@ -256,6 +258,7 @@ img:nth-child(5) {
   }
 
   .pic-ctn {
+    box-sizing: border-box;
     position: relative;
     width: 700px;
     height: 300px;

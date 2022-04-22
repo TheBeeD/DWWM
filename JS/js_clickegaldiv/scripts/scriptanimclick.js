@@ -3,7 +3,7 @@
 const navigation = document.querySelector('nav');
 window.addEventListener('scroll', () => { // <-- écoute du scroll de la souris
 
-    if (window.scrollY > 930) { // <--hauteur approximative de fond.jpg
+    if (window.scrollY > 600 || window.scrollY < 40) { // <--hauteur approximative de fond.jpg
         navigation.classList.add('anim-nav');
     } else {
         navigation.classList.remove('anim-nav');

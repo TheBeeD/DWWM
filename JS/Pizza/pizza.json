@@ -1,0 +1,39 @@
+{
+    "nom": "Pizza Express",
+    "slogan": "A peine commandée - Déjà livrée",
+    "pizzas": [
+        { "nomPizza": "4 fromages",
+          "prix": "10€",
+          "image": "http://pngimg.com/uploads/pizza/pizza_PNG7127.png",
+          "garniture": ["Mozzarella",
+                        "Gruyère",
+                        "Compté",
+                        "Bleu d'Auvergne",
+                        "Base-Tomate"
+          ]   
+        },
+        { "nomPizza": "Chèvre-Miel-Thym",
+          "prix": "12€",
+          "image": "https://i1.wp.com/www.multarte.com.br/wp-content/uploads/2019/03/pizza-fundo-transparente4.png?resize=666%2C658&ssl=1",
+          "garniture": ["Chevre",
+                        "Miel",
+                        "Thym",
+                        "Base-Tomate"
+            ]   
+        },
+        { "nomPizza": "Régina",
+          "prix": "11€",
+          "image": "http://pngimg.com/uploads/pizza/pizza_PNG44046.png",
+          "garniture": ["Jambon",
+                          "Olives",
+                          "Basilic",
+                          "Oignons",
+                          "Base-Tomate"  
+
+            ]
+
+        }
+
+
+    ] 
+}    

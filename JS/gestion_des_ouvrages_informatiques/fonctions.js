@@ -1,46 +1,45 @@
+var options = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
 function ChargeInfosJson() {
-    //  Allons chercher un fichier JSON 
+    /* Allons chercher un fichier Json */
     fetch('books.json')
         .then(response => { /* Une fois que le fichier est chargé */
-            return response.json();  /* Convertissons le en json */
+            return response.json();  /* Convertissons le en Json */
         })
-        .then(data => { /* Une fois le fichier converti */
-            console.log(data); /* Appelons notre fonction */
-            showBooks(data);
+        .then(data => { /*Une fois le fichier converti*/
+            console.log(data); /*Appelons notre fonction */
+            CreateDivs(data);
 
         }
-        )
+        
+        )}
+function CreateDivs(data) {
 
-}
+    const preview = document.getElementById("booksList");
 
-getJSON('authors', function createDivs(showBooks) {
-    const preview = document.getElementsByClassName("preview")[0, 1, 2];
-    preview.innerHTML = "";
-    const listAll = document.createElement("select");
-    listAll.innerHTML = '<select class="name">' + showBooks.authors + '</select>';
-})
+    for (let x = 0; x < data.length; x++) {
+        let listBook = document.createElement("div");
+        listBook.setAttribute("class", "card");
+        listBook.setAttribute("id", "livre");
+        var image;
 
-function showBooks(jsonObj) {
-    var books = jsonObj['authors','categories','thumbnailUrl'];
-
-    for (var i = 0; i < books.length; i++) {
-        var thumbnailUrl = document.createElement('img');
-        var authors = document.createElement('h2');
-        var categories = document.createElement('h2');
-
-        categories.innerText = books[i].name;
-        authors.innerText = 'Auteur: ' + showbook[i].authors;
-        thumbnailUrl.innerHTML = 'Appercu: ' + showbook[i].thumbnailUrl;
-
-        var imgLivre = book[i].thumbnailUrl;
-        for (var j = 0; j < imgLivre.length; j++) {
-            var listItem = document.createElement('li');
-            listItem.innerText = imgLivre[j];
-            myList.appendChild(listItem);
+        if ((data[x].thumbnailUrl == null) || (data[x].thumbnailUrl == undefined)) {
+            image = 'https://p1.storage.canalblog.com/14/48/1145642/91330992_o.png';
+        }
+        else {
+            image = data[x].thumbnailUrl;
         }
 
-        showBook.appendChild(thumbnailUrl);
-        showBook.appendChild(authors);
-        showBook.appendChild(categories);
+
+
+        listBook.innerHTML =
+            '<img class="image" src="' + image + '"/>'
+            + '<h1 class="titre">' + data[x].title + '</h1>'
+            + '<h2 class="isbn">' + data[x].isbn + '</h2>'
+            + '<h3 class="page">' + new Date(data[x].publishedDate.dt_txt).toLocaleDateString("fr-FR", options) + '</h3>'
+            + '<p class=shortDescription>' + data[x].shortDescription + '</p>';
+           
+        preview.appendChild(listBook);
+
     }
+
 }

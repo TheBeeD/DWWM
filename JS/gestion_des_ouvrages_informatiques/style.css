@@ -1,9 +1,42 @@
+@media only screen and (min-width: 500px) {
+    body {
+        width: 500px;  
+      }    
+    .band {
+      grid-template-columns: 1fr 1fr;
+    }  
+  }
+  @media only screen and (min-width: 1920px) {
+    body {
+        width: 1920px;  
+      }
+    .band {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }  
+  }  
+  @media only screen and (min-width: 1240px) {
+    body {
+        width: 1240px;  
+      }
+    .band {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }  
+  }  
+  @media only screen and (min-width: 850px) {
+    body {
+      width: 850px;  
+    }
+    .band {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+
 select {
     width: 800px;
 }
 #booksList {
     display: flex;
-    flex-direction: row;
+    flex-direction:row;
     max-height: 300px;
     max-width: 200px;
 }
@@ -12,7 +45,18 @@ select {
     max-height: 300px;
 }
 .image {
+    min-width: 150px;
+    min-height: 200px;
     max-width:150px;
     max-height: 200px;
     
+}
+.band {
+    width: 90%;
+    max-width: 1240px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
 }

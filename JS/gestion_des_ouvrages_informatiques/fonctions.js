@@ -13,7 +13,7 @@ function ChargeInfosJson() {
 
 }
 
-getJSON('authors', function createDivs(data) {
+getJSON('authors', function createDivs(showBooks) {
     const preview = document.getElementsByClassName("preview")[0, 1, 2];
     preview.innerHTML = "";
     const listAll = document.createElement("select");
@@ -39,8 +39,8 @@ function showBooks(jsonObj) {
             myList.appendChild(listItem);
         }
 
-        showBook.appendChild(myH2);
-        showBook.appendChild(myPara1);
-
+        showBook.appendChild(thumbnailUrl);
+        showBook.appendChild(authors);
+        showBook.appendChild(categories);
     }
 }

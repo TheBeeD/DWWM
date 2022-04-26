@@ -1,4 +1,4 @@
-var compteur = 0;
+  var compteur = 0;
 
 function chargeInfo() {
   compteur += 1;

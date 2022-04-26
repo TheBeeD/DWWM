@@ -11,6 +11,7 @@ function ChargeInfosJson() {
     })
 }
 
+
 function createDivs(data) {
   const preview = document.getElementsByClassName("preview")[0];
   preview.innerHTML = "";
@@ -28,9 +29,9 @@ function createDivs(data) {
   pizzeriaListPizzas.setAttribute("id", "pizzaList");
 
 
-  var pizzasList = data.pizzas;
-  for (var x = 0; x < pizzasList.length; x++) {
-    var pizzasListElement = document.createElement("div");
+  var pizzasListElement = data.pizzaListPizzas;
+  for (var x = 0; x < pizzasListElement.length; x++) {
+    const pizzasListElement = document.createElement("div");
     pizzasListElement.setAttribute("class", "card");
     pizzasListElement.innerHTML =
       '<h1 class="nomPizza">' +
@@ -43,17 +44,17 @@ function createDivs(data) {
       pizzasList[x].image +
       '>';
     pizzeriaListPizzas.appendChild(pizzasListElement);
-    var listeGarniture = pizzasList[x].garniture;
+    var listeGarniture = pizzasListElement[x].garniture;
     for (var y = 0; y <= listeGarniture.length - 1; y++) {
       var listeGarnitureElement = document.createElement('ul');	// create ul element.
-      listeGarnitureElement.setAttribute("class", "ingredients");
+      listeGarnitureElement.setAttribute("class", "garniture");
       listeGarnitureElement.innerHTML =
-        '<li class= "ingredient">' + pizzasList[x].garniture[y] + '</li>';
-      pizzeriaListPizzas.appendChild(ul);		// add ul to the container.
-      pizzeriaListPizzas.appendChild(pizzasList);
-      pizzeriaListPizzas.setAttribute("class", "pizzas");
-      pizzeriaListPizzas.setAttribute("id", "pizzas");
-      preview.appendChild(pizzeriaListPizzas);
+        '<li class= "garniture">' + pizzasListPizzas[x].garniture[y] + '</li>';
+      pizzaListPizzas.appendChild(ul);		// add ul to the container.
+      pizzaListPizzas.appendChild(pizzasListPizzas);
+      pizzaListPizzas.setAttribute("class", "pizzas");
+      pizzaListPizzas.setAttribute("id", "pizzas");
+      preview.appendChild(pizzaListPizzas);
 
 
     }

@@ -1,4 +1,4 @@
-@media only screen and (min-width: 500px) {
+/* @media only screen and (min-width: 500px) {
     body {
         width: 500px;  
       }    
@@ -32,21 +32,23 @@
     .band {
       grid-template-columns: 1fr 1fr 1fr 1fr;
     }
-  }
+  } */
 
 select {
-    width: 800px;
+    width: 300px;
+    margin-bottom: 10px;
 }
-#booksList {
+/* #booksList {
     display: flex;
     flex-direction:row;
     max-height: 300px;
     max-width: 200px;
-}
-.livre {
+} */
+/* .livre {
     max-width:200px;
     max-height: 300px;
 }
+*/
 .image {
     min-width: 150px;
     min-height: 200px;
@@ -54,12 +56,25 @@ select {
     max-height: 200px;
     
 }
+
 .band {
     width: 90%;
     max-width: 1240px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+
+} 
+.card{
+  display: flex;
+  flex-direction: column;
+  margin: 1vw;
+  padding: 10px;
+  height: 35vh;
+  width: 10vw;
+  background-color: rgb(247, 247, 247);
+  box-shadow: 10px 5px 10px 0 rgba(0,0,0,0.2);
+  border-radius: 7px;
+  overflow-y:auto; /*permet de définir les bords de la carte*/
+  align-content: center;
 }

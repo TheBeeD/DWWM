@@ -10,25 +10,26 @@
 </head>
 
 <body onload="ChargeInfosJson()">
-    
+    <div class="menu1">
+        <select id="listAuthors" onchange="AuthorFilterList()"><option value="">--Rechercher par auteur--</option></select>
+    </div>
+    <div class="menu2">
+        <select id="listCategories" name="Rechercher par catégorie" onchange="CategoryFilterList()"><option value="">--Rechercher par catégorie--</option></select>
+    </div>
+    <div id="booksList"></div>
     <div class="band">
  
         <!-- grid item, containing a card -->
         <div class="item">
-              <a href="" class="card">
-                <div class="thumb"></div>
-                <div id="booksList"></div>
-              </a>
+            <div class="cards">
+
+            
+                <div class="thumb" id="booksList"></div>
+            </div>
         </div>
 
          
       </div>
-    <div class="menu1">
-        <select id="listAuthors" onchange="ChargeByAuthor()"></select>
-    </div>
-    <div class="menu2">
-        <select id="listCategories" onchange="ChargeByCategorie()"></select>
-    </div>
 
 
     <script src="fonctions.js"></script>

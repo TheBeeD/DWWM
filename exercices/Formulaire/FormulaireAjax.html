@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<meta name="Content-Language" content="fr" />
+		<meta name="Description" content="" />
+		<meta name="Keywords" content="Bootstrap jQuery Ajax Regex" />
+		<meta name="Subject" content="" />
+		<meta name="Content-Type" content="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+	
+		<link rel="stylesheet" href="js/jquery-ui.css">
+		
+		<title>Formulaire d'incription</title>
+	</head>
+	<body class="my_background">
+		<div class="container">
+			</br>
+			<div class="row">
+				<div class="col-md-offset-2 col-md-3">
+					<div class="form-group">
+						<label for="Nom">Nom</label>
+						<input type="text" class="form-control" id="nom" placeholder="Nom"><span id="nom_ok"></span>
+					</div>
+				</div>
+				
+			</div>
+			<div class="row">
+				<div class="col-md-offset-2 col-md-3">
+					<div class="form-group">
+						<label for="Prenom">Prénom</label>
+						<input type="text" class="form-control" id="prenom" placeholder="Prénom"><span id="prenom_ok"></span>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-offset-2 col-md-5">
+					<div class="form-group">
+						<label for="Email">Adresse Mail</label>
+						<input type="text" class="form-control" id="email" placeholder="Email"><span id="email_ok"></span>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-offset-2 col-md-3">
+					<div class="form-group">
+						<table>
+							<tr>
+								<td>
+						<label for="password">Mot de passe</label>
+							<input type="password" class="form-control" id="password" placeholder="Mot de passe">
+								</td>
+								<td>
+									
+									<span id="affiche" 	class="glyphicon glyphicon-eye-open" style="height:34px;width:34px;position: auto;margin-left: -20px;margin-top:40px" title="SURVOLER POUR AFFICHER LE MOT DE PASSE SAISIE"></span>
+								</td>
+						</tr>
+						</table>
+						
+						<span id="password_ok"></span>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-offset-2 col-md-3">
+					<div class="form-group">
+						<label for="vpassword">Vérification mot de passe</label>
+						<input type="password" class="form-control" id="vpassword" placeholder="Vérification mot de passe"><span id="vpassword_ok"></span>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-offset-2 col-md-5">
+					<div class="form-group">
+						<label for="adresse">Adresse</label>
+						<input type="text" class="form-control" id="adresse" placeholder="Adresse" ><span id="adresse_ok"></span>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-offset-2 col-md-2">
+					<div class="form-group" name="zipbox">
+						<label for="zip">Code Postal</label>
+						<input type="text" class="form-control" id="zip" placeholder="Code Postal" autocomplete="off" autofocus>
+					</div>
+				</div>
+				<div class="col-md-offset-1 col-md-3">
+					<div class="form-group">
+						<label for="city">Ville</label>
+						<input type="text" class="form-control" id="city" placeholder="Ville" autocomplete="off">
+					</div>
+				</div>
+			</div>
+		
+		<div class="row">
+			<div class="col-md-offset-2 col-md-3">
+				<div class="input-group">
+					<span class="input-group-addon glyphicon glyphicon-earphone"></span>
+					<input type="text" class="form-control" placeholder="Téléphone" aria-describedby="basic-addon1">
+				</div>
+				
+			</div>
+		</div>
+		<br/>
+		
+	</div>
+
+
+	<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+	<script type="text/javascript" src="js/regex.js"></script>
+	<script type="text/javascript" src="js/cp.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+</body>
+</html>

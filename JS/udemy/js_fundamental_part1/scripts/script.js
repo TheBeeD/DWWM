@@ -1,7 +1,7 @@
 let country;
 let continent;
 let population;
-let myCountry = "Evreux";
+let myCountry = "France";
 let myContinent = "Europe";
 let myPopulation = "13";
 
@@ -10,4 +10,27 @@ continent = myContinent;
 population = myPopulation;
 
 console.log(country, continent, population);
-let isIsland = true;
+let isIsland = "Groix";
+isIsland = true;
+
+console.log(country, continent, population, isIsland);
+console.log(population/2);
+population++;
+console.log(population);
+console.log(population>6);
+console.log(population<33);
+
+const description1 = 
+country +
+ " is in " +
+  continent +
+   " and his population is more than " +
+    population;
+
+console.log(description1);
+
+console.log('9' - '5');
+console.log('19' - '13' + '17');
+console.log('19' - '13' + 17);
+console.log('123' < 57); 
+console.log(5 + 6 + '4' + 9 - 4 - 2);

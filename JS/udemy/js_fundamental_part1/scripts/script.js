@@ -5,15 +5,24 @@ let myCountry = "France";
 let myContinent = "Europe";
 let myPopulation = "13";
 
+const prenom = "Olivier";
+const nom = "BeD";
+
+
+console.log(prenom);
+console.log("Bonjour Monsieur " + nom +" "+ prenom +" !");
 country = myCountry;
 continent = myContinent;
 population = myPopulation;
 
 console.log(country, continent, population);
+
 let isIsland = "Groix";
 isIsland = true;
 
 console.log(country, continent, population, isIsland);
+
+
 console.log(population/2);
 population++;
 console.log(population);

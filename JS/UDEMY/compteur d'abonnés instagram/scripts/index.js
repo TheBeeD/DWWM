@@ -51,5 +51,6 @@ async function setFollowers(profileId) {
      getFollowers(profileId)
 }
 
-setInterval(() =>
-setFollowers('olivierbednarek'), 1000);
+// setInterval(() =>
+// setFollowers('olivierbednarek'), 1000);
+setFollowers('olivierbednarek');

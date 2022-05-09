@@ -41,14 +41,39 @@
 //     i++;
 // }
 
-// gérer le exeptions 50 8 
+// gérer le exeptions 50 8  C'est bon le switch case, bien utilisé ici bon pour "'modèle'".
 //  ------------------
 
 try {
+    let recompense = prompt("Choisissez une récompense: épée, arc, hache.");
+    let degats;
+    switch(recompense) {
+        case 'épée':
+            degats = 40;
+            break;
+        case 'arc':
+            degats = 30;
+            break;
+        case 'hache':
+            degats = 20;
+            break;  
+        default:
+            throw new Error('Vous ne pouvez pas tricher.');          
+    } 
+    alert('Vous avez choisi : ' + recompense + '( ' + degats + ' degats )');//bug ou je sais pas mais ça m'affiche pas les espaces juste avant l'arme.
+
     //erreur ?
-    alert(hello);
+    // alert(hello);
 }
 catch(error) {
-    // Erreur !
     alert(error);
+    // Erreur !
+//  alert("Message personnalisé du style: La variable n\'existe pas")
+    // alert(error.stack);// .message pour afficher juste le message d'erreur...
+    // .name affiche juste le nom de l'erreur
+    // .stack pour l'erreur complete.
+    // 
 } 
+finally {
+    alert('Fin du programme');
+}

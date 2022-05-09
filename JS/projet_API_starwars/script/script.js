@@ -1,7 +1,7 @@
-let planeteSection = document.getElementsByClassName("wrapper");
-let planets;
-let nomPersonnages;
-let listFilms;
+let planeteSection = innerHtml.document.getElementsByClassName("wrapper");
+let planets        = innerHTML.document.getElementById("planets");
+let nomPersonnages = innerHTML.document.getElementById("persos");
+let listFilms      = innerHtml.document.getElementById("films");
 
 
 var callBackGetSuccess = function (data) {
@@ -14,23 +14,23 @@ function chargeJson() {
             return response.json();
         })
         .then((data) => {
-            // On stock le tableau json dans une variable.
+        // On stock le tableau json dans une variable.
             tableauJson = data;
             console.log(tableauJson);
 
-            // On met cette variable en parametre de la fonction startPage.
-            //   startPage(tableauJson);
+        // On met cette variable en parametre de la fonction startPage.
+        //   startPage(tableauJson);
         });
 }
 chargeJson();
 //#endregion "Function chargeJson"
 //#region "Function fetchAPI multiple"
 async function fetchAPI(url) {
-    try {
+    // try {
 
-        await fetch(url, {
+        await fetch(url), {
             mode: 'cors'
-        })
+        }
             .then(async function (response) {
 
                 return await response.json();
@@ -40,9 +40,9 @@ async function fetchAPI(url) {
                 result = json;
 
             });
-    } catch (error) {
-        console.log("Error", error)
-    }
+    // } catch (error) {
+    //     console.log("Error", error)
+    // }
 }
 //#endregion "Function fetchAPI multiple"
 

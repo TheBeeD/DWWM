@@ -16,3 +16,9 @@ html, body {
     width: 800px;
     margin: 0 auto;
   }
+
+  .ma_class {
+    background: #e65c00;
+    background: -webkit-linear-gradient(to right, #F9D423, #e65c00);
+    background: linear-gradient(to right, #F9D423, #e65c00);
+  }

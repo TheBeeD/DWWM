@@ -34,35 +34,57 @@ console.log(title);
 
 //Première méthode: écrire juste du texte sans rien préciser (un peu à l'arrache quoi)
 
-document.write('test');
+// document.write('test');
 
 //Deuxieme méthode : Ajouter des éléments bruts
 
-let h1   = document.querySelector('h1');
-document.body.append('test');
+// let h1   = document.querySelector('h1');
+// document.body.append('test');
 
 //Troisième méthode (méthode conseillée pour ajouter des div ou des commandes d'autres site)
 
 
-//---------------------------------Créer un element---------------------------------------------|
+//---------------------------------Créer des éléments---------------------------------------------|
 //----------------------------------------------------------------------------------------------|
 let helloWorld          = document.createElement('div');
+let header          = document.createElement('header');
+let menu            = document.createElement('div');
+let p               = document.createElement('p');
 //                                                                                              |
 //                                                                                              |
-//le personaliser                                                                               |
+//les personaliser                                                                              |
 //---------------                                                                               |
 helloWorld.textContent  = "Ca fonctionne...enfin, j'éspère.."; 
 
+//Style header
+header.textContent           = "Bienvenue";
+header.style.backgroundColor = "#e3b04b";
+header.style.color           = "white";
+header.style.padding         = "15vh";
+header.style.fontSize        = "3em";
+header.style.textAlign       = "center";
+
+//Style menu                                                                                    |
+menu.innerHTML               = "<a href= '#'>Accueil</a> / <a href= '#'>Une autre page</a>";
+menu.style.backgroundColor   = "#f1d6ab";
+menu.style.padding           = "2vh";
+
+//Style p                                                                                       |
+p.textContent                = "Ceci est un texte créé avec JavaScript";
+p.style.margin               = "2vh";
 
 //l'ajouter à notre page                                                                        |
 //----------------------                                                                        |
 
 //Solution 1/3                                                                                  |
-// document.body.append(helloWorld);//<----------.append ou .appenChild sont équivalents         |
+// document.body.append(helloWorld);//<----------.append ou .appenChild sont équivalents        |
 
 //Solution 2/3                                                                                  |
 //document.body.insertBefore(helloWorld, document.querySelector('.container'));                 |
 
 //Solution 3/3                                                                                  |
+document.body.append(header, menu, p);
 document.querySelector('.container').prepend(helloWorld);
+//Les ajouter
+
 //----------------------------------------------------------------------------------------------|

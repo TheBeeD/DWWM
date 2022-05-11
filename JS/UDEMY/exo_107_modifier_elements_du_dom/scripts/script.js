@@ -46,15 +46,14 @@ console.log(title);
 
 //---------------------------------Créer des éléments---------------------------------------------|
 //----------------------------------------------------------------------------------------------|
-let helloWorld          = document.createElement('div');
-let header          = document.createElement('header');
-let menu            = document.createElement('div');
-let p               = document.createElement('p');
-//                                                                                              |
-//                                                                                              |
-//les personaliser                                                                              |
-//---------------                                                                               |
-helloWorld.textContent  = "Ca fonctionne...enfin, j'éspère.."; 
+let helloWorld               = document.createElement('div');
+let header                   = document.createElement('header');
+let menu                     = document.createElement('div');
+let p                        = document.createElement('p');
+
+//les personaliser                                                                            |
+//----------------                                                                               |
+helloWorld.textContent       = "Ca fonctionne...enfin, j'éspère.."; 
 
 //Style header
 header.textContent           = "Bienvenue";
@@ -73,18 +72,18 @@ menu.style.padding           = "2vh";
 p.textContent                = "Ceci est un texte créé avec JavaScript";
 p.style.margin               = "2vh";
 
-//l'ajouter à notre page                                                                        |
-//----------------------                                                                        |
+//Les ajouter                                                                        |
+//-----------                                                                       |
 
 //Solution 1/3                                                                                  |
-// document.body.append(helloWorld);//<----------.append ou .appenChild sont équivalents        |
+// document.body.append(helloWorld);//<---.append ou .appenChild sont équivalents        |
 
 //Solution 2/3                                                                                  |
 //document.body.insertBefore(helloWorld, document.querySelector('.container'));                 |
 
 //Solution 3/3                                                                                  |
-document.body.append(header, menu, p);
-document.querySelector('.container').prepend(helloWorld);
-//Les ajouter
+document.body.append(header, menu, helloWorld, p);
+
+
 
 //----------------------------------------------------------------------------------------------|

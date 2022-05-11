@@ -1,10 +1,10 @@
-// setTimeout
-let timer = setTimeout("alert('Bonjour')", 3000);
-clearTimeout(timer);
+// // setTimeout
+// let timer = setTimeout("alert('Bonjour')", 3000);
+// clearTimeout(timer);
 
-// setInterval
-let interval = setInterval("alert('Bonjour')", 5000);
-clearInterval(interval);
+// // setInterval
+// let interval = setInterval("alert('Bonjour')", 5000);
+// clearInterval(interval);
 
 let article = document.querySelector('article');
 let h1      = document.querySelector('h1');
@@ -23,10 +23,10 @@ h1.addEventListener('click', (e) => {//<----------C'est "e" qui est utilisé par
 
 //-----------------------------------setInterval-&-setTimeOut-------------------------------
 
-// // setTimeout
-// let timer = setTimeout("alert('Bonjour')", 3000);
-// clearTimeout(timer);
+// setTimeout
+let timer = setTimeout("alert('Bonjour')", 3000);
+clearTimeout(timer);
 
-// // setInterval
-// let interval = setInterval("alert('Bonjour')", 5000);
-// clearInterval(interval);
+// setInterval
+let interval = setInterval("alert('Bonjour')", 5000);
+clearInterval(interval);

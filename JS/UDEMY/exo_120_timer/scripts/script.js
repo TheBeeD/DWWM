@@ -1,3 +1,8 @@
+// let secondes = 10;
+// var x = '';
+// for (i= 1; i<=10 ; i++){
+// x = x+"1";
+// let button   = document.querySelector('button');
 let interval;
 let btn      = document.querySelector('button');
 let secondes = 10;
@@ -29,6 +34,8 @@ function decompte() {
       
 // clearTimeout(timer);
 // document.body.append(p);
+
+
 
 
 

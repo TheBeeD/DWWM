@@ -68,3 +68,4 @@ planetName.innerHTML = planets.planeteSection;
 planetName.setAttribute("id", "nomPlanete");
 planetName.append(planets);
 console.log(planetName);  
+

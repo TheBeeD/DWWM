@@ -6,11 +6,11 @@ function portee(nom) {
 
 var nomGlobale = "Halle ";
 
-console.log(window.nomGlobale + nomExterne + prenom);
+console.log(portee + nomExterne + prenom);// provoque une erreur
 
 console.log(nomGlobale + nomExterne + prenom);
 
-console.log(prenom);// provoque une erreur
+console.log(prenom);
 }
 
 portee("Ex ");

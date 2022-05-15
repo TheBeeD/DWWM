@@ -24,7 +24,7 @@ window.addEventListener('click', (e) => { // <--écoute du click
 
     setTimeout(() => { // <-- sinon le console.log est gavée en moins de 5minutes 
         rond.remove();
-             }, 1500) // <--1.5secondes laisse le temps à l'anim d'apparaitre avant que la div soit suprimée
+             }, 15000) // <--1.5secondes laisse le temps à l'anim d'apparaitre avant que la div soit suprimée
         
             })
     

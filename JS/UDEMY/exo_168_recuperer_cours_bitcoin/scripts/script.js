@@ -23,4 +23,4 @@ function recupererPrix() {
   console.log('Prix actualisé');
 }
 
-setInterval(recupererPrix,5000);
+setInterval(recupererPrix,1000);

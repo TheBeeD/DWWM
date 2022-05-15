@@ -12,7 +12,7 @@ const followers = document.getElementById('followers');
 //  Reglage du problème (cross origin request sharing)
 //  --------------------------------------------------
 
-const app = express(); //créé une application express
+// const app = express(); //créé une application express
 
 // logger les requests et les responses
 

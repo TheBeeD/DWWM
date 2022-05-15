@@ -11,3 +11,5 @@ var min=20;
 var max=80;  
 var random = Math.floor(Math.random() * (max - min)) + min; 
 alert(random);
+
+<h1>&#x2680; &#x2681; &#x2682; &#x2683; &#x2684; &#x2685;</h1>

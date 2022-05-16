@@ -5,14 +5,15 @@ jQuery(document).ready(function ($) {
 	const srcAlbumMini     = "albumsMini/"; // emplacement des images des albums en petit
 	const srcAlbum         = "albums/"; // emplacement des images des albums en grand
     
-	// // Lecture d'un album
-	// console.log("Lecture d'un album");
-	// var album = albums.get("5", [5]);
-	// var serie = series.get(album.idSerie);
-	// var auteur = auteurs.get(album.idAuteur);
-	// console.log(album.titre
-	// 	+" "+serie.nom
-	// 	+" "+auteur.nom);
+	// Lecture d'un album
+	console.log("Lecture d'un album");
+	var album = albums.get("5", [5]);
+	var serie = series.get(album.idSerie);
+	var auteur = auteurs.get(album.idAuteur);
+	console.log(album.titre
+		+" "
+		+serie.nom
+		+" "+auteur.nom);
 	
 	albums.forEach(album => {
         console.log(JSON.stringify(album));
@@ -20,6 +21,7 @@ jQuery(document).ready(function ($) {
     });
 	
 	auteurs.forEach(auteur => {
+		document.innerHTML.createElement('p')
         console.log(JSON.stringify(auteur));
 	});
 
@@ -142,12 +144,15 @@ jQuery(document).ready(function ($) {
 			txtAuteur.value = "";
 			txtPrix.value = 0;
 
-			afficheAlbums($("#albumMini"), $("#album"), albumDefaultMini, albumDefault);
+			afficheAlbums($("#albumMini"),
+			              $("#album"),
+						  albumDefaultMini,
+						  albumDefault);
 
 		} else {
 
-			var serie = series.get(album.idSerie);
-			var auteur = auteurs.get(album.idAuteur);
+			var serie = series.get(albums.idSerie);
+			var auteur = auteurs.get(albums.idAuteur);
 
 			txtSerie.value = serie.nom;
 			txtNumero.value = album.numero;
@@ -155,79 +160,84 @@ jQuery(document).ready(function ($) {
 			txtAuteur.value = auteur.nom;
 			txtPrix.value = album.prix;
 
-			var nomFic = serie.nom + "-" + album.numero + "-" + album.titre;
+			var nomFic = serie.nom 
+			+ "-"
+			+ album.numero 
+			+ "-" 
+			+ album.titre;
 
-			// Utilisation d'une expression régulière pour supprimer 
-			// les caractères non autorisés dans les noms de fichiers : '!?.":$
+//Utilisation d'une expression régulière pour supprimer les caractères non autorisés dans les noms de fichiers : '!?.":$
 			nomFic = nomFic.replace(/'|!|\?|\.|"|:|\$/g, "");
 
 			afficheAlbums(
-				$("#albumMini"),
-				$("#album"),
-				srcAlbumMini + nomFic + ".jpg",
-				srcAlbum + nomFic + ".jpg"
+
+				$("#albumMini"), $("#album"), srcAlbumMini 
+				+ nomFic
+				+ ".jpg", srcAlbum 
+				+ nomFic 
+				+ ".jpg",
 			);
 
 		}
 	}
 
-	/**
-	 * Affichage des images, les effets sont chainés et traités
-	 * en file d'attente par jQuery d'où les "stop()) et "clearQueue()" 
-	 * pour éviter l'accumulation d'effets si défilement rapide des albums.
-	 * 
-	 * @param {object jQuery} $albumMini 
-	 * @param {object jQuery} $album 
-	 * @param {string} nomFic 
-	 * @param {string} nomFicBig 
+	
+	//Affichage des images, les effets sont chainés et traités
+	//en file d'attente par jQuery d'où les "stop()) et "clearQueue()" 
+	//pour éviter l'accumulation d'effets si défilement rapide des albums.
+	  
+	/*  @param {object jQuery} $albumMini 
+	 *  @param {object jQuery} $album 
+	 *  @param {string} nomFic 
+	 *  @param {string} nomFicBig 
 	 */
 	function afficheAlbums($albumMini, $album, nomFicMini, nomFic) {
-		$album.stop(true, true).clearQueue().fadeOut(100, function () {
+		$album.stop(true, true).clearQueue().fadeOut(100), function () {
 			$album.attr('src', nomFic);
-			$albumMini.stop(true, true).clearQueue().fadeOut(150, function () {
+			$albumMini.stop(true, true).clearQueue().fadeOut(150), function () {
 				$albumMini.attr('src', nomFicMini);
-				$albumMini.slideDown(200, function () {
-					$album.slideDown(200);
-				});
-			})
-		});
+				$albumMini.slideDown(200),
+				function () {
+				    $album.slideDown(200);
+				};
+			}
+		};
 
 
 	}
 
-	/**
-	 * Affichage de l'image par défaut si le chargement de l'image de l'album
-	 * ne s'est pas bien passé
-	 * 
-	 * @param {object HTML} element 
-	 */
+
+// Affichage de l'image par défaut si le chargement de l'image de l'album ne s'est pas bien passé
+	 
+// @param {object HTML} element 
+
 	function prbImg(element) {
-		// console.log(element);
+//console.log(element);
 		if (element.id === "albumMini")
 			element.src = albumDefaultMini;
 		else element.src = albumDefault;
 
 	}
-
 });
 
 function albumSerie() {
-	console.log("Liste des albums par série");
-	var element = document.getElementById("zone_BD");
-	element.innerHTML = "";
-	for (var [idSerie, serie] of series.entries()) {
-		// Recherche des albums de la série
-		for (var [idAlbum, album] of albums.entries()) {
+	console.log('Liste des albums par série');
+	var listBd = document.getElementById('listbd');
+	listbd.innerHTML = "";
+	for ([idSerie, serie] of series.entries()) {
+		
+
+		for (var [idSerie, album] of albums.entries()) {   //Recherche des albums de la série
 			if (album.idSerie == idSerie) {
 				var element2 = document.createElement("p");
 				element2.innerHTML =
-					serie.nom +
-					" Album N°" +
-					album.numero +
-					"N° " +
-					album.titre +
-					" Auteur:" +
-					auteurs.get(album.idAuteur).nom;
+					serie.nom    
+					+" Album N°"  
+					+ album.numero
+					+ "N° "
+					+ album.titre  
+					+ " Auteur:"   
+					+ listBd.get(album.idAuteur).nom;
 			}
 		}
 		element.appendChild(element2);

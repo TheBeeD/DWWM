@@ -50,6 +50,7 @@ let helloWorld               = document.createElement('div');
 let header                   = document.createElement('header');
 let menu                     = document.createElement('div');
 let p                        = document.createElement('p');
+let select                   = document.createElement
 
 //les personaliser                                                                            |
 //----------------                                                                               |

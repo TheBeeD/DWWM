@@ -18,21 +18,21 @@
         <div class="row">
             <div class="col-sm-4 col-lg-6">
                 <p id="messageId">
-                    <label for="id">Id de l'album :</label>
-                    <input type="number" required id= "id" value="0" min= "0" title="Saisissez un numéro et validez">
+                    <label for="ident">Id de l'album :</label>
+                    <input type="number" required id= "ident" value="0" min= "0" title="Saisissez un numéro et validez">
                 </p>
                 <p>
                     <label for="serie">Série :</label>
-                    <input type="text" id="serie" readonly>
+                    <input type="text" id="serie" >
 
                     <label for="numero">Album N° :</label>
-                    <input type="text" id="numero" readonly>
+                    <input type="text" id="numero">
 
                     <label for="titre">Titre :</label>
-                    <input type="text" id="titre" readonly>
+                    <input type="text" id="titre" >
 
                     <label for="auteur">Auteur :</label>
-                    <input type="text" id="auteur" readonly>
+                    <input type="text" id="auteur">
                 </p>
                 <p>
                     <label for="prix">Prix :</label>
@@ -47,7 +47,9 @@
                 <img src="images/noComics.jpeg" id="album">
 
             </div>
-
+            <div class="col-sm-8 col-lg-6" id="listbd">
+                <p id="element"></p>
+            </div>
         </div>
 
     </div>

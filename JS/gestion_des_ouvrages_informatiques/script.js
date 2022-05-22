@@ -15,7 +15,9 @@ var ChargeByAuthor = function () {
   var e = document.getElementById("listAuthors");
   var strAuthors = e.options[e.selectedIndex].text;
   console.log(strAuthors);
+  //on incrémente jusque la taille de booklist
   for (var y = 0; y < booksList.length; y++) {
+     //on incrémente jusque la taille de booklist[y].authors jusqu'à z max
     for (var z = 0; z < booksList[y].authors.length; z++) {
       if (strAuthors == booksList[y].authors[z]) {
         // console.log("test");
@@ -120,27 +122,12 @@ function createDiv(data) {
         "https://p1.storage.canalblog.com/14/48/1145642/91330992_o.png";
     }
     booksListeElement.innerHTML =
-      '<img id="bookimage" src=' +
-      listBooks[i].thumbnailUrl +
-      ">" +
-      '<h1 class="bookname">' +
-      listBooks[i].title +
-      "</h1>" +
-      '<h2 class="isbn"><strong>ISBN : </strong>' +
-      listBooks[i].isbn +
-      "</h2>" +
-      '<h3 class="date">' +
-      new Date(listBooks[i].publishedDate.dt_txt).toLocaleDateString(
-        "fr-FR",
-        options
-      ) +
-      "</h3>" +
-      '<p class="page"><strong>Nombre de pages : </strong>' +
-      listBooks[i].pageCount +
-      "</p>" +
-      '<p class="desc"><strong>Description : </strong>' +
-      listBooks[i].shortDescription +
-      "</p>";
+      '<img id="bookimage" src=' + listBooks[i].thumbnailUrl +">"+ '<h1 class="bookname">' +
+      listBooks[i].title +"</h1>" +'<h2 class="isbn"><strong>ISBN : </strong>' +
+      listBooks[i].isbn +"</h2>" +'<h3 class="date">' +new Date(listBooks[i].publishedDate.dt_txt).toLocaleDateString(
+        "fr-FR", options) +"</h3>" +'<p class="page"><strong>Nombre de pages : </strong>' +
+        listBooks[i].pageCount +"</p>" +'<p class="desc"><strong>Description : </strong>' +
+      listBooks[i].shortDescription +"</p>";
     gestionnaireListeLivres.appendChild(booksListeElement);
     preview.appendChild(gestionnaireListeLivres);
   }

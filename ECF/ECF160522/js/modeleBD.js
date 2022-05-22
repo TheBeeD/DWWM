@@ -1,27 +1,26 @@
-jQuery(document).ready(function ($) {
+jQuery(document).ready = function ($) {
 	const srcImg           = "images/"; // emplacement des images de l'appli
 	const albumDefaultMini = srcImg + "noComicsMini.jpeg";
 	const albumDefault     = srcImg + "noComics.jpeg";
 	const srcAlbumMini     = "albumsMini/"; // emplacement des images des albums en petit
 	const srcAlbum         = "albums/"; // emplacement des images des albums en grand
+    const auteurs          = "data/auteurs.js";
     
-	// Lecture d'un album
-	console.log("Lecture d'un album");
-	var album = albums.get("5", [5]);
-	var serie = series.get(album.idSerie);
-	var auteur = auteurs.get(album.idAuteur);
-	console.log(album.titre
-		+" "
-		+serie.nom
-		+" "+auteur.nom);
-	
+	// var auteur             = auteur.auteurs;
+
+
 	albums.forEach(album => {
         console.log(JSON.stringify(album));
-		// document.writeln("<script type='text/javascript' src='data/albums.js'></script>");
-    });
+        document.writeln("<script type='text/javascript' src='data/albums.js'></script>");
+		var auteurs = [auteur];
+	});
+	// auteurs.forEach(auteur => {
+	// 		console.log(JSON.stringify(auteur));
+		
+    // });
 	
 	auteurs.forEach(auteur => {
-		document.innerHTML.createElement('p')
+		document.querySelector('#listbd')
         console.log(JSON.stringify(auteur));
 	});
 
@@ -31,13 +30,11 @@ jQuery(document).ready(function ($) {
 	});
 	
 	//on fait une recherche sur la map des albums: 
-    //EX: Je ne veux que les albums avec l'auteur Arleston, Mourier (idAuteur=11)
-
-    // Dans un premier temps on va aller recupérer l'id de l'auteur selon la saisie utilisateur (qui sera un input)
+       // Dans un premier temps on va aller recupérer l'id de l'auteur selon la saisie utilisateur (qui sera un input)
     
-    var idAuteurToSave=0;
+    var idAuteurToSave="";
     for (var [idAuteur, auteur] of auteurs.entries()) {
-        if (auteur.nom == addEventListener(input.auteur, this.auteur )){ //remplacer le nom de l'auteur ici par le choix de l'utilisateur
+        if (auteurs.nom == addEventListener(auteur, this.auteur )){ //remplacer le nom de l'auteur ici par le choix de l'utilisateur
             //on est sur le bon: on sauvegarde l'id, puis on sort de la boucle
             console.log("L'idAuteurToSave est juste ici  " + idAuteur)
             idAuteurToSave=parseInt(idAuteur);
@@ -59,7 +56,7 @@ jQuery(document).ready(function ($) {
 					+ auteur.nom 
 					+" Ref: "
 					+ idAlbum);
-            }
+            }return(innerHTML.createElement("duMemeAuteur",div));
         }
     }
 
@@ -149,9 +146,10 @@ jQuery(document).ready(function ($) {
 						  albumDefaultMini,
 						  albumDefault);
 
-		} else {
+		}
+		else {
 
-			var serie = series.get(albums.idSerie);
+			var serie = series.get(album.idSerie);
 			var auteur = auteurs.get(albums.idAuteur);
 
 			txtSerie.value = serie.nom;
@@ -160,37 +158,30 @@ jQuery(document).ready(function ($) {
 			txtAuteur.value = auteur.nom;
 			txtPrix.value = album.prix;
 
-			var nomFic = serie.nom 
-			+ "-"
-			+ album.numero 
-			+ "-" 
-			+ album.titre;
+			var nomFic = serie.nom + "-" + album.numero + "-" + album.titre;
 
 //Utilisation d'une expression régulière pour supprimer les caractères non autorisés dans les noms de fichiers : '!?.":$
 			nomFic = nomFic.replace(/'|!|\?|\.|"|:|\$/g, "");
 
 			afficheAlbums(
-
-				$("#albumMini"), $("#album"), srcAlbumMini 
-				+ nomFic
-				+ ".jpg", srcAlbum 
-				+ nomFic 
-				+ ".jpg",
+				$("#albumMini"), $("#album"),
+				 srcAlbumMini + nomFic + ".jpg",
+				 srcAlbum + nomFic + ".jpg",
 			);
 
 		}
 	}
 
-	
-	//Affichage des images, les effets sont chainés et traités
-	//en file d'attente par jQuery d'où les "stop()) et "clearQueue()" 
-	//pour éviter l'accumulation d'effets si défilement rapide des albums.
-	  
-	/*  @param {object jQuery} $albumMini 
-	 *  @param {object jQuery} $album 
-	 *  @param {string} nomFic 
-	 *  @param {string} nomFicBig 
-	 */
+	/**
+	* Affichage des images, les effets sont chainés et traités
+	* en file d'attente par jQuery d'où les "stop()) et "clearQueue()" 
+	* pour éviter l'accumulation d'effets si défilement rapide des albums.
+	*
+	*  @param {object jQuery} $albumMini 
+	*  @param {object jQuery} $album 
+	*  @param {string} nomFic 
+	*  @param {string} nomFicBig 
+	*/
 	function afficheAlbums($albumMini, $album, nomFicMini, nomFic) {
 		$album.stop(true, true).clearQueue().fadeOut(100), function () {
 			$album.attr('src', nomFic);
@@ -207,18 +198,18 @@ jQuery(document).ready(function ($) {
 	}
 
 
-// Affichage de l'image par défaut si le chargement de l'image de l'album ne s'est pas bien passé
-	 
-// @param {object HTML} element 
-
-	function prbImg(element) {
-//console.log(element);
+/** Affichage de l'image par défaut si le chargement de l'image de l'album ne s'est pas bien passé
+*	 
+* @param {object HTML} element 
+*/
+function prbImg(element) {
+        //console.log(element);
 		if (element.id === "albumMini")
 			element.src = albumDefaultMini;
 		else element.src = albumDefault;
 
 	}
-});
+
 
 function albumSerie() {
 	console.log('Liste des albums par série');
@@ -226,20 +217,16 @@ function albumSerie() {
 	listbd.innerHTML = "";
 	for ([idSerie, serie] of series.entries()) {
 		
-
-		for (var [idSerie, album] of albums.entries()) {   //Recherche des albums de la série
-			if (album.idSerie == idSerie) {
-				var element2 = document.createElement("p");
-				element2.innerHTML =
-					serie.nom    
-					+" Album N°"  
-					+ album.numero
-					+ "N° "
-					+ album.titre  
-					+ " Auteur:"   
-					+ listBd.get(album.idAuteur).nom;
+		for (var [idSerie, album] of album.entries()) {   //Recherche des albums de la série
+			
+			if (albums.idSerie == albums.entries) {
+				var element = document.createElement("p");
+				element.innerHTML = serie.nom + " Album N°" + album.numero + "N° " + album.titre + " Auteur:" + listBd.get(album.idAuteur).nom;
 			}
+		 
 		}
-		element.appendChild(element2);
+		
 	}
-}
+};
+};
+

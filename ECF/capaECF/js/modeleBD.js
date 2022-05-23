@@ -1,20 +1,24 @@
+const srcImg = "images/"; // emplacement des images de l'appli
+const albumDefaultMini = srcImg + "noComicsMini.jpeg";
+const albumDefault = srcImg + "noComics.jpeg";
+const srcAlbumMini = "albumsMini/"; // emplacement des images des albums en petit
+const srcAlbum = "albums/"; // emplacement des images des albums en grand
+//essai du 22/05
+const auteursAuteur = "auteurs/"; //emplacement des auteurs
+const seriesSerie = "series/"; //Emplacement des map series
+const albumTitre = "albums/";
+
 jQuery(document).ready(function ($) {
-	const srcImg = "images/"; // emplacement des images de l'appli
-	const albumDefaultMini = srcImg + "noComicsMini.jpeg";
-	const albumDefault = srcImg + "noComics.jpeg";
-	const srcAlbumMini = "albumsMini/"; // emplacement des images des albums en petit
-	const srcAlbum = "albums/"; // emplacement des images des albums en grand
-    //essai du 22/05
-	const auteursAuteur = "auteurs/"; //emplacement des auteurs
-	const seriesSerie = "series/"; //Emplacement des map series
-	/*
+
+});
+
 	// Lecture d'un album
-	console.log("Lecture d'un album");
-	var album = albums.get("5");
-	var serie = series.get(album.idSerie);
-	var auteur = auteurs.get(album.idAuteur);
-	console.log(album.titre+" "+serie.nom+" "+auteur.nom);
-	*/
+	// console.log("Lecture d'un album");
+	// var album = albums.get(albumTitre.titre);
+	// var serie = series.get(album.idSerie);
+	// var auteur = auteurs.get(album.idAuteur);
+	// console.log(album.titre+" "+serie.nom+" "+auteur.nom);
+	
 
 	/*
 	console.log("Liste des albums");
@@ -25,18 +29,6 @@ jQuery(document).ready(function ($) {
 	});
 	*/
 
-	/*
-	console.log("Liste des albums par série");
-	for(var [idSerie, serie] of series.entries()) {
-	    // Recherche des albums de la série
-	    for (var [idAlbum, album] of albums.entries()) {
-	        if (album.idSerie == idSerie) {
-	            console.log(serie.nom+", Album N°"+album.numero+" "+album.titre+", Auteur:"+auteurs.get(album.idAuteur).nom);
-	        }
-	    }
-	    
-	}
-	*/
 
 	/*
 	console.log("Liste des albums par auteur");
@@ -110,16 +102,12 @@ jQuery(document).ready(function ($) {
 			// les caractères non autorisés dans les noms de fichiers : '!?.":$
 			nomFic = nomFic.replace(/'|!|\?|\.|"|:|\$/g, "");
 
-			afficheAlbums(
-				$("#albumMini"),
-				$("#album"),
-				srcAlbumMini + nomFic + ".jpg",
-				srcAlbum + nomFic + ".jpg"
+			afficheAlbums($("#albumMini"),$("#album"),srcAlbumMini + nomFic + ".jpg",srcAlbum + nomFic + ".jpg"
 			);
 
 		}
 	}
-//essais 22/05
+//#region essais 22/05
 function getAuteur(num) {
 
 	var auteur = auteurs.get(num.value);
@@ -159,17 +147,13 @@ function getAuteur(num) {
 
 	}
 }
-//end essai 22/05
-	/**
-	 * Affichage des images, les effets sont chainés et traités
+//#endregion essai 22/05
+
+	 /* Affichage des images, les effets sont chainés et traités
 	 * en file d'attente par jQuery d'où les "stop()) et "clearQueue()" 
 	 * pour éviter l'accumulation d'effets si défilement rapide des albums.
-	 * 
-	 * @param {object jQuery} $albumMini 
-	 * @param {object jQuery} $album 
-	 * @param {string} nomFic 
-	 * @param {string} nomFicBig 
 	 */
+//#region affichage des albums un par un avec anim
 	function afficheAlbums($albumMini, $album, nomFicMini, nomFic) {
 		$album.stop(true, true).clearQueue().fadeOut(100, function () {
 			$album.attr('src', nomFic);
@@ -197,5 +181,20 @@ function getAuteur(num) {
 		else element.src = albumDefault;
 
 	}
+//#endregion affichage des albums un par un avec anim
 
-});
+
+//#region essai 1 du 23/05  -----------le console.log affiche les series à la suite, comment les ressortir série par série
+	
+console.log("Liste des albums par série");
+for(var [idSerie, serie] of series.entries()) {
+	// Recherche des albums de la série
+	for (var [idAlbum, album] of albums.entries()) {
+		if (album.idSerie == idSerie) {
+			console.log(serie.nom + " ,"+album.idSerie+", Auteur:"+auteurs.get(album.idAuteur).nom+ ", " + album.titre);
+			document.createElement('div',"#fenetre"), album.idSerie, album.titre ;
+		}
+	}
+	
+}
+//#endregion essai 1 du 23/05

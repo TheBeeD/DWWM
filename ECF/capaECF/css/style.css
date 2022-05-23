@@ -1,7 +1,23 @@
+@media only screen and (min-width: 500px) {
+  .band {
+    grid-template-columns: 1fr 1fr;
+  }  
+}
+@media only screen and (min-width: 850px) {
+  .band {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
 body {
   font: 1em sans-serif;
   padding: 0;
   margin: 0;
+}
+h1 {
+  font: 10vw ;
+  font-family: 'Bangers', cursive;
+  text-align: center;
 }
 
 form {
@@ -13,7 +29,31 @@ form {
 p>label {
   display: block;
 }
+#preview {
+ max-height: 20%;
+ display: flex;
+ flex-wrap: wrap;
+ text-decoration: none;
+ color: #444;
+ box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+ margin: 5%;
+ border: solid, black, 2px;
+ padding: auto;
+ border-radius: 3%;
+ width: 90%;
+ max-width: 1240px;
+ margin: 0 auto;  
+ grid-template-columns: 1fr;
+ grid-template-rows: auto;
+ grid-gap: 20px;
 
+}
+
+.card {
+  border-radius: 5%;
+  margin-top: 5px;
+
+}
 legend {
   background-color: #000;
   color: #fff;
@@ -27,7 +67,7 @@ textarea,
 fieldset {
   /* requis pour composer de manière appropriée les éléments
      de formulaire sur les navigateurs fondés sur WebKit */
-  -webkit-appearance: none;
+  -webkit-appearance:listbox;
 
   width: 100%;
   border: 1px solid #333;

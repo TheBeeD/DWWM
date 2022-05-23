@@ -5,8 +5,7 @@ const srcAlbumMini = "albumsMini/"; // emplacement des images des albums en peti
 const srcAlbum = "albums/"; // emplacement des images des albums en grand
 //essai du 22/05
 const auteursAuteur = "auteurs/"; //emplacement des auteurs
-const seriesSerie = "series/"; //Emplacement des map series
-const albumTitre = "albums/";
+
 	// Affichage des BD
 var txtSerie = document.getElementById("serie");
 var txtNumero = document.getElementById("numero");
@@ -175,8 +174,8 @@ jQuery(document).ready(function ($) {
 		prbImg(this)
 	});
 
-	var id = document.getElementById("id");
-	id.addEventListener("change", function () {
+	var id = document.getElementById("ident");
+	ident.addEventListener("change", function () {
 		getAlbum(this)
 	});
 
@@ -198,10 +197,10 @@ for(var [idSerie, serie] of series.entries()) {
 	// Recherche des albums de la série
 	for (var [idAlbum, album] of albums.entries()) {
 		if (album.idSerie == idSerie) {
-			console.log(serie.nom + " ,"+album.idSerie+", Auteur:"+auteurs.get(album.idAuteur).nom+ ", " + album.titre);
+			console.log("C'est ici que ça commence :" + serie.nom + " ,"+album.idSerie+", Auteur:"+auteurs.get(album.idAuteur).nom+ ", " + album.titre);
 			// var fenetre = document.createElement('div',"#fenetre", album.idSerie, album.titre ,auteurs.nom);
 			// fenetre.innerHTML.setAttribute('class', "card");
-            	
+            break;	
 		}
 	}
 	
@@ -219,14 +218,14 @@ for(var [idSerie, serie] of series.entries()) {
 
 function recherche(){
 
-	var infoARechercher = document.getElementById('search').value;
-	console.log(infoARechercher);
+	var nomARechercher = document.getElementById('search').value;
+	console.log(nomARechercher);
     var idAuteurSaved = 0;
 
 
 	for(var [idAuteur, auteur] of auteurs.entries()) {
 
-		if(auteur.nom==infoARechercher){
+		if(auteur.nom==nomARechercher){
 			idAuteurSaved=idAuteur;
 			preview.innerHTML ="";
 			break;
@@ -241,12 +240,13 @@ function recherche(){
 				//Etape 2: on lui mets des attributs card.setAttribute('class','card');
 				card.setAttribute('class','card');
 					//etape 2.5: card.innerHTML='<div>' + album.nom + '</div'>
-					card.innerHTML='<div>' + album.titre + '</div>' + '<img src=' +albumMini+ '.jpg>';//le souci est ici...comment y mettre les images corespondantes
+					card.innerHTML='<div>' + album.titre +'<br>'+ album.prix +'€'+ '<img src="images/noComicsMini.jpeg">' + '</div>' ;//le souci est ici...comment y mettre les images corespondantes
+					// 
 					//Etape3: on la rajoute à preview: preview.appendChild(card)
 					preview.appendChild(card);
 
 
-	            console.log(auteur.nom+", Album N°"+album.numero+" "+album.titre+", Série:"+series.get(album.idSerie).nom);
+	            console.log(card);
 	        }
 	    }
 		

@@ -23,7 +23,7 @@
                 <h1>Liste des BD</h1>
                 <p id="selecttri">
                     <label for="button1">Trier par: </label>
-                    <input type="radio"id="parauteur" name="tri" value="">Tri par auteur</input><br/>
+                    <input type="radio"id="parauteur" name="tri" value="">Tri par auteur</input>
                     <input type="radio"id="parserie" name="tri" value="">Tri par série</input><br/>
 
                     
@@ -39,10 +39,11 @@
                              class="form-text text-muted" 
                              onchange = "recherche()" >
                       </small>
-                   </input><!---apparu sur la page depuis que INput est devenu input----> 
+                   </input>
                    <button onclick="recherche()" 
                            id="rechparauteur">Rechercher par auteur</button>
-                   <button onclick="recherche()" id="rechparliste">Rechercher par série </button>
+                   <button onclick="recherche()" 
+                           id="rechparliste">Rechercher par série </button>
                 </div>
                 </p>
                 <p id="messageId">

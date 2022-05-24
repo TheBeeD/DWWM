@@ -193,15 +193,31 @@ jQuery(document).ready(function ($) {
 //#region 
 	
 console.log("Liste des albums par série");
-for(var [idSerie, serie] of series.entries()) {
-	// Recherche des albums de la série
+var serieARechercher = document.getElementById('search').value;
+console.log('serieARechercher');
+var idSerie = albums.idSerie;
+var idSerieSaved = 0;
+
+for(var [idSerie, serie] of series.entries()) {	// Recherche des albums de la série
+
 	for (var [idAlbum, album] of albums.entries()) {
+		var nomFic = serie.nom + "-" + album.numero + "-" + album.titre;
+				//Etape 1: on créé une div (ou une card): var card= document.createElement('card)
+				var card= document.createElement('card');
+				//Etape 2: on lui mets des attributs card.setAttribute('class','card');
+				card.setAttribute('class','card');
 		if (album.idSerie == idSerie) {
-			console.log(serie.nom + " ,"+album.idSerie+", Auteur:"+auteurs.get(album.idAuteur).nom+ ", " + album.titre);
+			console.log(serie.nom + " ,"+album.idSerie+", Auteur:"+auteurs.get(album.idAuteur)+ ", " + album.titre);
 			
-            break;	
+			card.innerHTML='<div>' + album.titre +'<br>'+ '<img src="' + srcAlbumMini + nomFic + ".jpg"  + '"/>' + ""+ nom +'<br>'+ album.prix + '€' + '</div>' ;
+			imgAlbumMini.addEventListener("error", function () {
+				prbImg(this)
+			});
+			break;	
 		}
+		
 	}
+
 	
 }
 
@@ -227,7 +243,7 @@ function recherche(){
 
 	for(var [idAuteur, auteur] of auteurs.entries()) {
 
-		if(auteur.nom==nomARechercher){
+		if(auteur.nom.includes(nomARechercher)){
 			idAuteurSaved=idAuteur;
 			preview.innerHTML ="";
 			break;
@@ -244,8 +260,9 @@ function recherche(){
 				//Etape 2: on lui mets des attributs card.setAttribute('class','card');
 				card.setAttribute('class','card');
 					//etape 2.5: card.innerHTML='<div>' + album.nom + '</div'>
+				nomFic = nomFic.replace(/'|!|\?|\.|"|:|\$/g, "");
 				card.innerHTML='<div>' + album.titre +'<br>'+ '<img src="' + srcAlbumMini + nomFic + ".jpg"  + '"/>' +'<br>'+ album.prix + '€' + '</div>' ;//le souci est ici...comment y mettre les images corespondantes
-
+				console.log(srcAlbumMini + nomFic + ".jpg");
 					//Etape3: on la rajoute à preview: preview.appendChild(card)
 					preview.appendChild(card);
 

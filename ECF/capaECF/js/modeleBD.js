@@ -52,7 +52,7 @@ const preview = document.getElementById('preview');
 			// les caractères non autorisés dans les noms de fichiers : '!?.":$
 			nomFic = nomFic.replace(/'|!|\?|\.|"|:|\$/g, "");
 
-			afficheAlbums($("#albumMini"),$("#album"),srcAlbumMini + nomFic + ".jpg",srcAlbum + nomFic + ".jpg"
+			afficheAlbums($("#albumMini"),$("#album"),srcAlbumMini + nomFic + ".jpg" , srcAlbum + nomFic + ".jpg"
 			);
 
 		}
@@ -190,16 +190,15 @@ jQuery(document).ready(function ($) {
 //#endregion affichage des albums un par un avec anim
 
 
-//#region essai 1 du 23/05  -----------le console.log affiche les series à la suite, comment les ressortir série par série
+//#region 
 	
 console.log("Liste des albums par série");
 for(var [idSerie, serie] of series.entries()) {
 	// Recherche des albums de la série
 	for (var [idAlbum, album] of albums.entries()) {
 		if (album.idSerie == idSerie) {
-			console.log("C'est ici que ça commence :" + serie.nom + " ,"+album.idSerie+", Auteur:"+auteurs.get(album.idAuteur).nom+ ", " + album.titre);
-			// var fenetre = document.createElement('div',"#fenetre", album.idSerie, album.titre ,auteurs.nom);
-			// fenetre.innerHTML.setAttribute('class', "card");
+			console.log(serie.nom + " ,"+album.idSerie+", Auteur:"+auteurs.get(album.idAuteur).nom+ ", " + album.titre);
+			
             break;	
 		}
 	}
@@ -207,20 +206,23 @@ for(var [idSerie, serie] of series.entries()) {
 }
 
 });
-//#endregion essai 1 du 23/05
+//#endregion
 
 
 
 // fontion recherche qu'il faudra appeler au click du bouton
-//dedans je verifie si c'est une recherche par rauteur ou par série
-// Dans l'un ou l'autre cas, le traitement sera différent (if... then... else): peut être des fonctions a appeler selon les criteres
+//dedans je verifie si c'est une recherche par auteur ou par série
+// Dans l'un ou l'autre des cas, le traitement sera différent (if... then... else): peut être des fonctions a appeler selon les criteres
 
 
 function recherche(){
 
+	
+
 	var nomARechercher = document.getElementById('search').value;
 	console.log(nomARechercher);
     var idAuteurSaved = 0;
+
 
 
 	for(var [idAuteur, auteur] of auteurs.entries()) {
@@ -235,28 +237,25 @@ function recherche(){
 	    // Recherche des albums de l'auteur
 	    for (var [idAlbum, album] of albums.entries()) {
 	        if (album.idAuteur == idAuteurSaved) {
+				serie = series.get(album.idSerie);
+				var nomFic = serie.nom + "-" + album.numero + "-" + album.titre;
 				//Etape 1: on créé une div (ou une card): var card= document.createElement('card)
 				var card= document.createElement('card');
 				//Etape 2: on lui mets des attributs card.setAttribute('class','card');
 				card.setAttribute('class','card');
 					//etape 2.5: card.innerHTML='<div>' + album.nom + '</div'>
-					card.innerHTML='<div>' + album.titre +'<br>'+ album.prix +'€'+ '<img src="images/noComicsMini.jpeg">' + '</div>' ;//le souci est ici...comment y mettre les images corespondantes
-					// 
+				card.innerHTML='<div>' + album.titre +'<br>'+ '<img src="' + srcAlbumMini + nomFic + ".jpg"  + '"/>' +'<br>'+ album.prix + '€' + '</div>' ;//le souci est ici...comment y mettre les images corespondantes
+
 					//Etape3: on la rajoute à preview: preview.appendChild(card)
 					preview.appendChild(card);
 
 
 	            console.log(card);
 	        }
-	    }
-		
-	    
-	
+			
+	    };		
+	 
 
 
 
-// for(var [idSerie, serie] of series.entries()) {
- 
-	   
-// }
-};
+	};

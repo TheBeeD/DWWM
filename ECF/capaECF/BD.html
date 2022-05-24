@@ -30,10 +30,19 @@
                     <div class="form-group">
                       <label for=""></label>
                       <input type="text"
-                        class="form-control" name="" id="search" aria-describedby="helpId" placeholder="">
-                      <small id="helpId" class="form-text text-muted" onchange="recherche()"></small>
+                             class="form-control" 
+                             name="" 
+                             id="search" 
+                             placeholder=""
+                             onkeypress = "recherche()">
+                      <small id="helpId" 
+                             class="form-text text-muted" 
+                             onchange = "recherche()" >
+                      </small>
                    </input><!---apparu sur la page depuis que INput est devenu input----> 
-                   <button onclick="recherche()">Rechercher</button>
+                   <button onclick="recherche()" 
+                           id="rechparauteur">Rechercher par auteur</button>
+                   <button onclick="recherche()" id="rechparliste">Rechercher par série </button>
                 </div>
                 </p>
                 <p id="messageId">
@@ -41,6 +50,7 @@
                     <input type="number" id="ident" value="0" min="0" title="Saisissez un numéro et validez">
                 </p>
                 <p>
+                    
                     <label for="serie">Série :</label>
                     <input type="text" id="serie" readonly >
 
@@ -67,7 +77,7 @@
                 <img src="images/noComics.jpeg" id="album">
 
             </div>
-
+            <p id="listpreview">Liste des albums concernés:</p>            
             <div id="preview"></div> 
 
         </div>
@@ -76,6 +86,7 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/open-weather/2.0.0/openweather.min.js" integrity="sha512-mlRoH3bU+q4t5clJkMwltJcka6JyNWsUJybBclHUiU0Bdux6LtcNqO8XMNi9/vp4+KCteAbc0hYnHU4Rh2SH+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     <script src="data/albums.js"></script>

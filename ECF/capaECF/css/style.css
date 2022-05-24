@@ -1,10 +1,10 @@
 @media only screen and (min-width: 500px) {
-  .band {
+  .card {
     grid-template-columns: 1fr 1fr;
   }  
 }
 @media only screen and (min-width: 850px) {
-  .band {
+  .card {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
@@ -25,8 +25,10 @@ form {
   margin: 0;
   padding: 0 5px;
 }
-
-p>label {
+#listpreview{
+  margin: 5vw;
+}
+p > label {
   display: block;
 }
 #preview {
@@ -39,9 +41,10 @@ p>label {
  margin: 5%;
  border: solid, black, 2px;
  padding: auto;
- border-radius: 3%;
+ border-radius: 5px;
  width: 90%;
- max-width: 1240px;
+ max-width: 100%;
+ min-width: 50%;
  margin: 0 auto;  
  grid-template-columns: 1fr;
  grid-template-rows: auto;
@@ -52,7 +55,8 @@ p>label {
 .card {
   border-radius: 5%;
   margin-top: 5px;
-
+  max-width: 18%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
 }
 legend {
   background-color: #000;

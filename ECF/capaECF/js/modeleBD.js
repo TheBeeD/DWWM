@@ -164,7 +164,7 @@ jQuery(document).ready(function ($) {
 	    
 	}
 	*/
-
+});
 
 	imgAlbum.addEventListener("error", function () {
 		prbImg(this)
@@ -190,39 +190,7 @@ jQuery(document).ready(function ($) {
 //#endregion affichage des albums un par un avec anim
 
 
-//#region 
-	
-console.log("Liste des albums par série");
-var serieARechercher = document.getElementById('search').value;
-console.log('serieARechercher');
-var idSerie = albums.idSerie;
-var idSerieSaved = 0;
 
-for(var [idSerie, serie] of series.entries()) {	// Recherche des albums de la série
-
-	for (var [idAlbum, album] of albums.entries()) {
-		var nomFic = serie.nom + "-" + album.numero + "-" + album.titre;
-				//Etape 1: on créé une div (ou une card): var card= document.createElement('card)
-				var card= document.createElement('card');
-				//Etape 2: on lui mets des attributs card.setAttribute('class','card');
-				card.setAttribute('class','card');
-		if (album.idSerie == idSerie) {
-			console.log(serie.nom + " ,"+album.idSerie+", Auteur:"+auteurs.get(album.idAuteur)+ ", " + album.titre);
-			
-			card.innerHTML='<div>' + album.titre +'<br>'+ '<img src="' + srcAlbumMini + nomFic + ".jpg"  + '"/>' + ""+ nom +'<br>'+ album.prix + '€' + '</div>' ;
-			imgAlbumMini.addEventListener("error", function () {
-				prbImg(this)
-			});
-			break;	
-		}
-		
-	}
-
-	
-}
-
-});
-//#endregion
 
 
 
@@ -232,9 +200,60 @@ for(var [idSerie, serie] of series.entries()) {	// Recherche des albums de la s�
 
 
 function recherche(){
+//#region Recherche Série------------------------------------------------
+if (addEventListener('click', document.rechparliste )){	
+	console.log("Liste des albums par série");
+	var serieARechercher = document.getElementById('search').value;
+	console.log(serieARechercher);
+
+	var idSerieSaved = 0;
+
+	for(var [idSerie, serie] of series.entries()) {	// Recherche des albums de la série
+
+		if(series.nom.includes(serieARechercher)){
+		idSerieSaved = idSerie;
+		preview.innerHTML = "";
+		break;
+	}
+
+
+	for (var [idAlbum, album] of albums.entries()) {
+		if (album.idSerie == idSerieSaved) {
+			serie = series.get(album.idSerie);
+			var nomFic = serie.nom + "-" + album.numero + "-" + album.titre;
+			//Etape 1: on créé une div (ou une card): var card= document.createElement('card)
+			var card= document.createElement('card');
+			//Etape 2: on lui mets des attributs card.setAttribute('class','card');
+			card.setAttribute('class','card');
+			card.onclick="changeImage()";
+			card.onmouseleave="backImage()";
+			//etape 2.5: card.innerHTML='<div>' + album.nom + '</div'>
+			nomFic = nomFic.replace(/'|!|\?|\.|"|:|\$/g, "");
+			card.innerHTML='<div>' + album.titre +'<br>'+ serie.nom + '<br/>' + '<img src="' + srcAlbumMini + nomFic + ".jpg"  + '"/>' +'<br>'+ album.prix + '€' + '</div>' ;
+			console.log(srcAlbumMini + nomFic + ".jpg");
+			//Etape3: on la rajoute à preview: preview.appendChild(card)
+			preview.appendChild(card);
+
+			function changeImage(){
+				document.card.src=srcAlbum;
+			}
+			function backImage(){
+				document.card.src=srcAlbumMini;
+			}
+	        console.log(card);
+		
+	}
 
 	
+}
 
+	};
+}
+//#endregion Recherche Série--------------------------------------------
+//#region Recherche des albums de l'auteur	
+
+else(
+	addEventListener('click', document.rechparauteur)); {
 	var nomARechercher = document.getElementById('search').value;
 	console.log(nomARechercher);
     var idAuteurSaved = 0;
@@ -250,7 +269,7 @@ function recherche(){
 		}
 
     }
-	    // Recherche des albums de l'auteur
+
 	    for (var [idAlbum, album] of albums.entries()) {
 	        if (album.idAuteur == idAuteurSaved) {
 				serie = series.get(album.idSerie);
@@ -259,13 +278,21 @@ function recherche(){
 				var card= document.createElement('card');
 				//Etape 2: on lui mets des attributs card.setAttribute('class','card');
 				card.setAttribute('class','card');
+				card.onclick="changeImage()";
+				card.onmouseleave="backImage()";
 					//etape 2.5: card.innerHTML='<div>' + album.nom + '</div'>
 				nomFic = nomFic.replace(/'|!|\?|\.|"|:|\$/g, "");
-				card.innerHTML='<div>' + album.titre +'<br>'+ '<img src="' + srcAlbumMini + nomFic + ".jpg"  + '"/>' +'<br>'+ album.prix + '€' + '</div>' ;//le souci est ici...comment y mettre les images corespondantes
+				card.innerHTML='<div>' + album.titre +'<br>'+ serie.nom + '<br/>' + auteur.nom + '<br/>' +'<img src="' + srcAlbumMini + nomFic + ".jpg"  + '"/>' +'<br>'+ album.prix + '€' + '</div>' ;
 				console.log(srcAlbumMini + nomFic + ".jpg");
 					//Etape3: on la rajoute à preview: preview.appendChild(card)
 					preview.appendChild(card);
 
+				function changeImage(){
+					document.card.src=srcAlbum;
+				}
+				function backImage(){
+					document.card.src=srcAlbumMini;
+				}
 
 	            console.log(card);
 	        }
@@ -273,6 +300,9 @@ function recherche(){
 	    };		
 	 
 
+		}
+
+};
+//#endregion Recherche des albums de l'auteur
 
 
-	};

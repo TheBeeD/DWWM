@@ -55,8 +55,8 @@ p > label {
 .card {
   border-radius: 5%;
   margin-top: 5px;
-  max-width: 18%;
   box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  max-width: 40%;
 }
 legend {
   background-color: #000;

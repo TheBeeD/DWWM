@@ -22,31 +22,33 @@
             <div class="col-sm-4 col-lg-6">
                 <h1>Liste des BD</h1>
                 <p id="selecttri">
-                    <label for="button1">Trier par: </label>
-                    <input type="radio"id="parauteur" name="tri" value="">Tri par auteur</input>
-                    <input type="radio"id="parserie" name="tri" value="">Tri par série</input><br/>
+                   
 
                     
-                    <div class="form-group">
+
                       <label for=""></label>
                       <input type="text"
                              class="form-control" 
                              name="" 
                              id="search" 
-                             placeholder=""
-                             onkeypress = "recherche()">
+                             onkeypress="recherche('auteur'&&'serie')"
+                             placeholder="">
                       <small id="helpId" 
                              class="form-text text-muted" 
                              onchange = "recherche()" >
+                             <div class="form-group">
+                            <button onclick="recherche('auteur')" 
+                            id="rechparauteur">Rechercher par auteur
+                            </button>
+                            <button onclick="recherche('serie')" 
+                            id="rechparliste">Rechercher par série 
+                            </button>
+                     </div>
                       </small>
                    </input>
-                   <button onclick="recherche()" 
-                           id="rechparauteur">Rechercher par auteur</button>
-                   <button onclick="recherche()" 
-                           id="rechparliste">Rechercher par série </button>
-                </div>
+
                 </p>
-                <p id="messageId">
+                <!-- <p id="messageId">
                     <label for="id">Id de l'album :</label>
                     <input type="number" id="ident" value="0" min="0" title="Saisissez un numéro et validez">
                 </p>
@@ -64,7 +66,7 @@
                     <label for="auteur">Auteur :</label>
                     <input type="text" id="auteur" readonly >
                 </p>
-                <p>
+                <p> -->
                     <label for="prix">Prix :</label >
                     <input type="number" id="prix" readonly >
                 </p>
@@ -93,7 +95,7 @@
     <script src="data/albums.js"></script>
     <script src="data/series.js"></script>
     <script src="data/auteurs.js"></script>
-    <script src="js/modeleBD.js"></script>
+    <script src="js/BD.js"></script>
 </body>
 
 </html>

@@ -1,11 +1,14 @@
-@media only screen and (min-width: 500px) {
+@media only screen and (max-width: 500px) {
   .card {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
+  img{
+    max-width: max-content;
   }  
 }
-@media only screen and (min-width: 850px) {
+@media only screen and (max-width: 850px) {
   .card {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -57,6 +60,12 @@ p > label {
   margin-top: 5px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.5);
   max-width: 40%;
+}
+img {
+  display: wrap;
+  flex-wrap: wrap;
+  width: fit-content;
+  max-width: 100%;
 }
 legend {
   background-color: #000;

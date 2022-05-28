@@ -8,9 +8,9 @@
 }
 .btn-12{
   position: relative;
-
+  top: 5px; 
   right: 20px;
-  bottom: 25px;
+  bottom: 35px;
   border:none;
   box-shadow: none;
   width: 130px;
@@ -21,7 +21,7 @@
 }
 .btn-12 span {
   background:  bisque;
-background: linear-gradient(0deg, rgb(238, 222, 0) 0%, rgb(234, 251, 2) 100%);
+background: linear-gradient(0deg, bisque 0%, bisque 100%);
   display: block;
   position: absolute;
   width: 130px;
@@ -40,21 +40,21 @@ background: linear-gradient(0deg, rgb(238, 222, 0) 0%, rgb(234, 251, 2) 100%);
 }
 .btn-12 span:nth-child(1) {
   box-shadow:
-   -7px -7px 20px 0px #fff9,
+   -5px -5px 15px 0px #fff9,
    -4px -4px 5px 0px #fff9,
    7px 7px 20px 0px #0002,
    4px 4px 5px 0px #0001;
   -webkit-transform: rotateX(90deg);
-  -moz-transform: rotateX(90deg);
-  transform: rotateX(90deg);
+  -moz-transform: rotatey(90deg);
+  transform: rotatey(90deg);
   -webkit-transform-origin: 50% 50% -20px;
   -moz-transform-origin: 50% 50% -20px;
   transform-origin: 50% 50% -20px;
 }
 .btn-12 span:nth-child(2) {
-  -webkit-transform: rotateX(0deg);
-  -moz-transform: rotateX(0deg);
-  transform: rotateX(0deg);
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  transform: rotateY(0deg);
   -webkit-transform-origin: 50% 50% -20px;
   -moz-transform-origin: 50% 50% -20px;
   transform-origin: 50% 50% -20px;
@@ -63,18 +63,18 @@ background: linear-gradient(0deg, rgb(238, 222, 0) 0%, rgb(234, 251, 2) 100%);
   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
    7px 7px 20px 0px rgba(0,0,0,.1),
    4px 4px 5px 0px rgba(0,0,0,.1);
-  -webkit-transform: rotateX(0deg);
-  -moz-transform: rotateX(0deg);
-  transform: rotateX(0deg);
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  transform: rotateY(0deg);
 }
 .btn-12:hover span:nth-child(2) {
-  box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-   7px 7px 20px 0px rgba(0,0,0,.1),
+  box-shadow:inset 2px 2px 2px 0px rgba(255, 255, 255, 0.281),
+   5px 5px 15px 0px rgba(0,0,0,.1),
    4px 4px 5px 0px rgba(0,0,0,.1);
  color: transparent;
-  -webkit-transform: rotateX(-90deg);
-  -moz-transform: rotateX(-90deg);
-  transform: rotateX(-90deg);
+  -webkit-transform: rotateY(-90deg);
+  -moz-transform: rotateY(-90deg);
+  transform: rotateY(-90deg);
 }
 
 
@@ -89,7 +89,9 @@ background: linear-gradient(0deg, rgb(238, 222, 0) 0%, rgb(234, 251, 2) 100%);
     align-content: center;
   }
 
-
+#toto {
+  display: hidden;
+}
 body {
   font: 1em sans-serif;
   padding: 0;
@@ -99,6 +101,7 @@ body {
 header{
   padding: 2vw;
   margin-bottom: 1vw;
+  width: 100%;
 }
 header > h1 {
   font: 5em;
@@ -119,7 +122,11 @@ form {
 p > label {
   display: block;
   font-family: 'Bangers', cursive;
-
+  top: 15px;
+}
+#messageId {
+  padding: 10px;
+  top: 25px;
 }
 #preview > p {
 

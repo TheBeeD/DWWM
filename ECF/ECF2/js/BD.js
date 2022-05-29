@@ -27,7 +27,7 @@ function getAlbum(num) {
 		txtAuteur.value = "";
 		txtPrix.value = 0;
 
-		afficheAlbums( $("#album"), albumDefault); //$("#albumMini"), , albumDefaultMini
+		afficheAlbums( $("#album"), albumDefault);
 
 	} else {
 
@@ -81,12 +81,7 @@ function getAuteur(num) {
 		// les caractères non autorisés dans les noms de fichiers : '!?.":$
 		nomFic = nomFic.replace(/'|!|\?|\.|"|:|\$/g, "");
 
-		afficheAlbums(
-			// $("#albumMini"),
-			$("#album"),
-			// srcAlbumMini + nomFic + ".jpg",
-			srcAlbum + nomFic + ".jpg"
-		);
+		afficheAlbums($("#album"),srcAlbum + nomFic + ".jpg");
 
 	}
 }
@@ -114,8 +109,7 @@ function afficheAlbums($albumMini, $album, nomFicMini, nomFic) {
 
 }
 
-jQuery(document).ready(function ($) {
-});
+
 
 imgAlbum.addEventListener("error", function () {
 	prbImg(this)
@@ -215,11 +209,11 @@ for (var [idAlbum, album] of albums.entries()) {
 var quantite = "";
 var titreAlbum = album.titre;
 var prixAlbum = album.prix;
-var panier = new Array([ titreAlbum , prixAlbum, quantite]) ;
 var selectedCard = addEventListener('click',preview.card);
 
-innerHTML.preview.createElement( 'table', panier[ titreAlbum , prixAlbum, quantite]);
-panier.document.createAttribute( ligneDAchat,'tr'  )
+const panier = createElement('table',[ titreAlbum , prixAlbum, quantite]) ;
+panier.setAttribute( 'table', [ titreAlbum , prixAlbum, quantite]);
+panier.setAttribute( ligneDAchat,'tr'  );
 function ajouterAuPanier(selectedCard){
 	let panier = [                         
     [titreAlbum , prixAlbum, quantite]

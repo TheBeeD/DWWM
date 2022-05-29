@@ -140,7 +140,7 @@ background: linear-gradient(0deg, bisque 0%, bisque 100%);
 }
 .btn-2:hover span:nth-child(2) {
   box-shadow:inset 2px 2px 2px 0px rgba(255, 255, 255, 0.281),
-   5px 5px 15px 0px rgba(0,0,0,.1),
+   5px 5px 7px 0px rgba(0,0,0,.1),
    4px 4px 5px 0px rgba(0,0,0,.1);
  color: transparent;
   -webkit-transform: rotateY(-90deg);
@@ -169,7 +169,7 @@ body {
 
 }
 header{
-  padding: 2vw;
+  padding: 4vw;
   margin-bottom: 1vw;
   width: 100%;
 }

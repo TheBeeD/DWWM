@@ -205,9 +205,6 @@ for (var [idAlbum, album] of albums.entries()) {
 	var nomFic = serie.nom + "-" + album.numero + "-" + album.titre;
 	var card = document.createElement('card');
 	card.setAttribute('class', 'card');
-
-
-
 	
 	nomFic = nomFic.replace(/'|!|\?|\.|"|:|\$/g, "");
 	card.innerHTML = '<div id=' + album.titre + '>'+ '<p>' + album.titre + `</p>` + '<p>' + serie.nom + `</p>` + " par " + auteur.nom  + '<br>' + '<img src="' + srcAlbumMini + nomFic + ".jpg" + '"/>' + '<br>' + album.prix + '€' + '</div>';
@@ -216,13 +213,17 @@ for (var [idAlbum, album] of albums.entries()) {
 	//#endregion Affichage avant la recherche
 //#region Ajout au panier;
 var quantite = "";
-var panier = new Array(3) ;
+var titreAlbum = album.titre;
+var prixAlbum = album.prix;
+var panier = new Array([ titreAlbum , prixAlbum, quantite]) ;
 var selectedCard = addEventListener('click',preview.card);
 
-document.createElement( 'tr', panier[ album.titre , album.prix, quantite]);
+innerHTML.preview.createElement( 'table', panier[ titreAlbum , prixAlbum, quantite]);
 panier.document.createAttribute( ligneDAchat,'tr'  )
-panier.forEach(element => {
+function ajouterAuPanier(selectedCard){
+	let panier = [                         
+    [titreAlbum , prixAlbum, quantite]
+];	
 	
-	
-});
+};
 //#endregion Ajout au panier

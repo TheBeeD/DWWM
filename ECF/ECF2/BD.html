@@ -34,13 +34,13 @@
 
 
 
-                    <label for="">Nom d'auteur ou de série recherchée</label>
+                    <label for="">Saisissez un nom d'auteur ou de série à rechercher</label>
                     <input type="text" class="form-control" name="" id="search" placeholder="">
                     <small id="helpId" class="form-text text-muted" onchange="recherche()">
                         <div class="form-group">
-                            <button onclick="recherche('auteur')" id="rechparauteur"class="custom-btn btn-12"><span>Rechercher</span><span>Par auteur</span>
+                            <button onclick="recherche('auteur')" id="rechparauteur"class="custom-btn btn-1"><span>Rechercher</span><span>Par auteur</span>
                             </button>
-                            <button onclick="recherche('serie')" id="rechparliste" class="custom-btn btn-12"><span>Rechercher</span><span>Par série</span>
+                            <button onclick="recherche('serie')" id="rechparliste" class="custom-btn btn-2"><span>Rechercher</span><span>Par série</span>
                             </button>
                         </div>
                     </small>
@@ -48,7 +48,7 @@
 
                 </p>
                 <p id="messageId">
-                    <label for="id">Id de l'album :</label>
+                    <label for="id">Ou faites défiler les album par identifiant:</label>
                     <input type="number" id="ident" value="0" min="0" title="Saisissez un numéro et validez">
                 </p>
                 <p>
@@ -85,8 +85,11 @@
         </div>
       
     </div>
+
     <p id="listpreview">Liste des albums concernés:</p>
+    
     <div id="preview"></div>
+    
     <img src="images/noComicsMini.jpeg" id="albumMini">     
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"

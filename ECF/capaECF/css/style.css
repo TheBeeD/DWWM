@@ -82,7 +82,7 @@ background: linear-gradient(0deg, bisque 0%, bisque 100%);
     background-color: bisque;
     border-radius: 2%;
     box-shadow: 0 2px 5px rgba(0,0,0,0.5);
-    max-width: 40%;
+    width: 175px;
     max-height: 20%;
     padding: 5%, 5%, 5%, 5%;
     grid-template-columns: 1fr 1fr;
@@ -156,9 +156,9 @@ p > label {
 .card> img {
   display: wrap;
   flex-wrap: wrap;
-  align-content: center;
   max-width:80%;
   min-width:80%;
+  align-content: center;
 
 }
 

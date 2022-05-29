@@ -46,7 +46,7 @@ function getAlbum(num) {
 		// les caractères non autorisés dans les noms de fichiers : '!?.":$
 		nomFic = nomFic.replace(/'|!|\?|\.|"|:|\$/g, "");
 
-		afficheAlbums($("#album"), $("#albumMini"), srcAlbumMini + nomFic + ".jpg", srcAlbum + nomFic + ".jpg" 
+		afficheAlbums($("#album"), $("#albumMini"), srcAlbum + nomFic + ".jpg" , srcAlbumMini + nomFic + ".jpg"
 		);
 
 	}
@@ -82,9 +82,9 @@ function getAuteur(num) {
 		nomFic = nomFic.replace(/'|!|\?|\.|"|:|\$/g, "");
 
 		afficheAlbums(
-			$("#albumMini"),
+			// $("#albumMini"),
 			$("#album"),
-			srcAlbumMini + nomFic + ".jpg",
+			// srcAlbumMini + nomFic + ".jpg",
 			srcAlbum + nomFic + ".jpg"
 		);
 
@@ -214,12 +214,13 @@ for (var [idAlbum, album] of albums.entries()) {
 	preview.appendChild(card);
 };
 	//#endregion Affichage avant la recherche
-//#region Ajout au panier
+//#region Ajout au panier;
 var quantite = "";
-var selectedCard = addEventListener('click','.card');
+var panier = new Array(3) ;
+var selectedCard = addEventListener('click',preview.card);
 
 document.createElement( 'tr', panier[ album.titre , album.prix, quantite]);
-document.panier.createAttribute( ligneDAchat,'tr'  )
+panier.document.createAttribute( ligneDAchat,'tr'  )
 panier.forEach(element => {
 	
 	

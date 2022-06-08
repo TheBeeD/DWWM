@@ -1,0 +1,67 @@
+
+
+
+SELECT * WHERE ville='Lyon'OR'Marseille';
+
+select * personne where salaire BETWEEN 2000 and 3000;
+
+
+SELECT * personne WHERE ville='Lyon' OR 'Marseille';
+
+SELECT * personne WHERE salaire BETWEEN 2000 and 3000;
+
+SELECT * personne WHERE ville='Marseille' AND salaire NOT BETWEEN 2000 AND 2500; 
+
+
+
+SELECT * personne WHERE ville='Lyon' OR 'Marseille';
+
+SELECT * personne WHERE salaire BETWEEN 2000 and 3000;
+
+SELECT * personne WHERE ville='Marseille' AND salaire NOT BETWEEN 2000 AND 2500; 
+
+SELECT * FROM personne WHERE ville LIKE'%a%';
+
+SELECT * FROM vehicule WHERE nump IS NOT nul;
+
+SELECT marque, IFNULL(nump) 'pas de propriertaire';
+
+SELECT nump,COUNT(*)AS nombre_vehicule FROM vehicule WHERE nump IS NOT NULL GROUP BY nump;
+
+SELECT * personne GROUP BY ville, SUM(salaire);
+
+SELECT * nump WHERE marque='Renault' UNION SELECT nump WHERE marque='Citroen';
+
+SELECT nom, prenom, ville, marque, model
+FROM personne JOIN vehicule 
+ON num = nump
+UNION
+SELECT nom, prenom, ville, marque, model
+FROM vehicule left join personne
+ON nump = num
+UNION
+SELECT nom, prenom, ville, marque, model
+FROM vehicule right join personne
+ON nump = num;
+===
+SELECT nom, prenom, ville, marque, modele
+FROM personne FULL JOIN vehicule ON num = nump;
+
+
+SELECT prenom='Muriel' FROM `client` AND Sha1(password)=Sha1(test11); ne fonctionne pas
+
+SELECT * FROM client WHERE prenom = 'Muriel' AND (client.password = sha1('test11')); fonctionne
+
+SELECT * FROM client WHERE prenom = 'Muriel' AND (client.password = sha1('test11'));
+SELECT * FROM commande WHERE nom = nom.commande_ligne;
+
+SELECT * FROM commande WHERE (nom.commande = nom.commande_ligne) AND INSERT IN commande COLUMN ;
+===
+SELECT nom, COUNT(*) AS nbr_items 
+FROM `commande_ligne` 
+GROUP BY nom 
+HAVING nbr_items > 1
+ORDER BY nbr_items DESC;
+
+
+

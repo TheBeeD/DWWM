@@ -1,0 +1,21 @@
+t_d_product
+1 kit
+2 unitaire
+3 kit
+4 unitaire
+
+t_d_productkit 
+
+1     2   250
+1     4    2
+
+INSERT INTO `t_d_product_prd`(`PRD_DESCRIPTION`,`PRD_PRICE`) VALUES (`Produit1`,`18.50`);
+
+
+INSERT INTO `t_d_product_prd`( `SPL_ID`, `PTY_ID`, `PRD_DESCRIPTION`, `PRD_GUARANTEE`, `PRD_PRICE`) VALUES ('Fournisseur1','1','Produit1','36','512.5')
+INSERT INTO `t_d_product_prd`( `SPL_ID`, `PTY_ID`, `PRD_DESCRIPTION`, `PRD_GUARANTEE`, `PRD_PRICE`) VALUES (`Fournisseur1`,`1`,`Produit1`,`36`,`512,50`)
+INSERT INTO `t_d_product_prd`( `SPL_ID`, `PTY_ID`, `PRD_DESCRIPTION`, `PRD_GUARANTEE`, `PRD_PRICE`) VALUES (`FournisseurA`,`1`,`Produit1`,`36`,`512,50`)
+
+INSERT INTO `t_d_address_adr`( `ADR_FIRSTNAME`, `ADR_LASTNAME`, `ADR_LINE1`, `ADR_ZIPCODE`, `ADR_CITY`, `ADR_COUNTRY`, `ADR_MAIL`, `ADR_PHONE`) VALUES ('Bob','Morane','350 avenue Franklin Roosvelt','27000','Evreux','France','bob@gmal.cul','0625222336]')
+
+

@@ -1,0 +1,37 @@
+SELECT Productname, COUNT(*) AS nameitems 
+
+FROM `products` WHERE SupplierID=1
+
+GROUP BY nameitems 
+
+HAVING nameitems > 1
+
+ORDER BY nameitems DESC;
+
+
+-----------------------------------------------
+
+SELECT * FROM suppliers WHERE Country = 'France';
+
+SELECT COUNT(distinct UnitsOnOrder) FROM `products`WHERE SupplierID=1
+
+GROUP BY products.Productname 
+
+ORDER BY UnitsOnOrder DESC;
+
+---------------------------------------------------
+1) fonctionne retourne les fournisseurs français (ceci dit c'était les contacts qui étaient demandés)
+
+SELECT * FROM suppliers WHERE Country = 'France';
+
+2) fonctionne retourne les nom et quantités de produits vendus par le fournisseur ayant l'ID=1
+
+SELECT UnitsOnOrder, ProductName FROM `products`WHERE SupplierID=1
+GROUP BY products.Productname 
+ORDER BY UnitsOnOrder DESC;
+
+3) 
+SELECT * FROM suppliers WHERE Country = 'France';
+SELECT UnitsOnOrder, ProductName, UnitPrice FROM `products` 
+GROUP BY products.Productname 
+ORDER BY QuantityPerUnit DESC;

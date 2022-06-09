@@ -20,9 +20,9 @@ GROUP BY products.Productname
 ORDER BY UnitsOnOrder DESC;
 
 ---------------------------------------------------
-1) fonctionne retourne les fournisseurs français (ceci dit c'était les contacts qui étaient demandés)
+1) fonctionne retourne les contacts français 
 
-SELECT * FROM suppliers WHERE Country = 'France';
+SELECT * FROM customers WHERE Country = 'France';
 
 2) fonctionne retourne les nom et quantités de produits vendus par le fournisseur ayant l'ID=1
 
@@ -35,3 +35,15 @@ SELECT * FROM suppliers WHERE Country = 'France';
 SELECT UnitsOnOrder, ProductName, UnitPrice FROM `products` 
 GROUP BY products.Productname 
 ORDER BY QuantityPerUnit DESC;
+
+4)
+CREATE OR REPLACE VIEW cmdFran AS
+SELECT CompanyName,count(OrderID)
+FROM orders join customers on orders.CustomerID=customers.CustomerID
+WHERE Country='France'
+group by CompanyName
+having count( OrderID) >10;
+SELECT * FROM cmdFran
+
+5)
+
